@@ -1,5 +1,4 @@
 import fast2lean from "../assets/logos/fast2lean-darker.svg";
-import f2l from "../assets/logos/f2l-darker.svg";
 export const Home: React.FC = () => {
   return (
     <>
