@@ -18,3 +18,9 @@ h1, h2, p, button, ul, li {
   background-color: #00C896;
   /* background-color: #ffa726; */
 }
+.cta-dark {
+  background-color: #2E7D32;
+}
+.border-green {
+  border: 2px solid #2E7D32;
+}
