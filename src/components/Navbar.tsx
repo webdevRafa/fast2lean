@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logos/fast2lean.svg";
 import { RiMenu2Fill } from "react-icons/ri";
 
@@ -8,7 +9,9 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center max-w-[1400px] mx-auto px-4">
           <img className="h-[15px]" src={logo} alt="" />
           <ul className="md:flex gap-5 justify-between items-center hidden">
-            <li>Home</li>
+            <Link to="/">
+              <li>Home</li>
+            </Link>
             <li>Blog</li>
             <li>Resources</li>
             <li>Subscribe</li>
