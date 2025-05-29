@@ -6,6 +6,8 @@ import { useInViewAnimation } from "../hooks/useInViewAnimation";
 
 export const Home: React.FC = () => {
   const { ref: missionRef, visible: missionVisible } = useInViewAnimation();
+  const { ref: brandmessageRef, visible: brandmessageVisible } =
+    useInViewAnimation();
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-16">
@@ -25,7 +27,12 @@ export const Home: React.FC = () => {
       {/* Brand Message */}
       <section
         id="brand-message"
-        className="text-center flex items-center justify-center mb-20"
+        ref={brandmessageRef}
+        className={`text-center flex items-center justify-center mb-20 transition duration-1200 md:duration-600 ease-out ${
+          brandmessageVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[40px]"
+        }`}
       >
         <div>
           <img className="w-[100px] mx-auto mb-0" src={roots} alt="" />
