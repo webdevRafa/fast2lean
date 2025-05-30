@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .hero {
-  background-image: url('../src/assets/images/water.jpg');
+  background-image: url('../src/assets/images/hero-img.png');
   background-size: cover;
   background-position: center;
 }
@@ -9,7 +9,9 @@
 body {
   background-color: #F3F6F4;
 }
-
+.bg-body, .benefit {
+  background-color: #F3F6F4;
+}
 h1, h2, p, button, ul, li {
   color: #2E2E2E;
 }
@@ -23,4 +25,8 @@ h1, h2, p, button, ul, li {
 }
 .border-green {
   border: 2px solid #2E7D32;
+}
+
+#white {
+  color: white;
 }

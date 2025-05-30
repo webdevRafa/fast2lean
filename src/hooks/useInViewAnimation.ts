@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
 type UseInViewAnimationReturn = {
-    ref: React.RefObject<HTMLElement | null>;
+    ref: React.RefObject<HTMLDivElement | null>;
     visible: boolean;
 }
 
 export const useInViewAnimation = (): UseInViewAnimationReturn => {
-    const ref = useRef<HTMLElement | null>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -18,7 +18,8 @@ export const useInViewAnimation = (): UseInViewAnimationReturn => {
                 }
             },
             {
-                threshold: 0.4,
+                threshold: 0.2,
+                rootMargin: '150px'
             }
         );
 

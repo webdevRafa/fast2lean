@@ -12,7 +12,10 @@ export const Navbar: React.FC = () => {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <li>Blog</li>
+            <Link to="/about">
+              <li>About</li>
+            </Link>
+            <li>Articles</li>
             <li>Resources</li>
             <li>Subscribe</li>
           </ul>
