@@ -4,11 +4,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig"; // your db setup
 import { Timestamp } from "firebase/firestore";
 
-interface ArticleSection {
-  heading: string;
-  content: string;
-}
-
 interface Article {
   title: string;
   excerpt: string;
