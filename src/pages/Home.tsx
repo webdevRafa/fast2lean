@@ -147,7 +147,7 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="bg-white shadow-md hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
             <h3 className="text-xl font-semibold mb-2">
-              10 Real Benefits of Intermittent Fasting
+              10 real benefits of intermittent fasting
             </h3>
             <p className="text-gray-700">
               Learn how fasting improves focus, metabolism, and overall quality
@@ -155,18 +155,20 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
           <div className="bg-white shadow-sm hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-2">
-              How Fasting Helped My Focus As a Developer
-            </h3>
-            <p className="text-gray-700">
-              Personal story of mental clarity, productivity, and better coding
-              sessions.
-            </p>
+            <Link to={`/articles/coding-with-fasting`}>
+              <h3 className="text-xl font-semibold mb-2">
+                How fasting helped my focus as a Developer
+              </h3>
+              <p className="text-gray-700">
+                Personal story of mental clarity, productivity, and better
+                coding sessions.
+              </p>
+            </Link>
           </div>
           <div className="bg-white shadow-sm hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
             <Link to={`/articles/bdnf-and-depression`}>
               <h3 className="text-xl font-semibold mb-2">
-                How Intermittent Fasting could help with depression
+                How intermittent fasting could help with depression
               </h3>
               <p className="text-gray-700">
                 Exploring a natural, science-backed angle to support mental
