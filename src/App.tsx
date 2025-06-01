@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { IntermittentFasting } from "./pages/IntermittentFasting";
 import { About } from "./pages/About";
 import ArticlePage from "./pages/ArticlePage";
+import Articles from "./pages/Articles";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:slug" element={<ArticlePage />} />
           <Route
             path="/intermittent-fasting"

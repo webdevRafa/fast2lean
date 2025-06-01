@@ -30,3 +30,7 @@ h1, h2, p, button, ul, li {
 #white {
   color: white;
 }
+
+strong {
+  color: #235d26;
+}
