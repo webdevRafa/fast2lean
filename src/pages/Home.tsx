@@ -167,8 +167,8 @@ export const HomePage: React.FC = () => {
               : "translate-y-[80px] opacity-0"
           }`}
         >
-          <div className="col-span-2 row-span-2 bg-white shadow-md  p-6 rounded-xl">
-            <section className="bg-white py-20 px-6">
+          <div className="md:col-span-2 md:row-span-2 bg-white shadow-md  p-6 rounded-xl">
+            <section className="bg-white py-5 md:py-20 px-2 md:px-6">
               <h2 className="text-3xl font-bold text-center mb-10">
                 10 Real Benefits of Intermittent Fasting
               </h2>
