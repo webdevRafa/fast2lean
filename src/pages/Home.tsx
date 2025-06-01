@@ -1,5 +1,7 @@
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import { Link } from "react-router-dom";
+import brain from "../assets/images/brain.png";
+import mood from "../assets/images/mood.png";
 
 export const HomePage: React.FC = () => {
   const { ref: benefit1Ref, visible: benefit1Visible } = useInViewAnimation();
@@ -11,6 +13,10 @@ export const HomePage: React.FC = () => {
   const { ref: subRef, visible: subVisible } = useInViewAnimation();
   const { ref: buttonRef, visible: buttonVisible } = useInViewAnimation();
   const { ref: hookRef, visible: hookVisible } = useInViewAnimation();
+  const { ref: articleHeaderRef, visible: articleHeaderVisible } =
+    useInViewAnimation();
+  const { ref: articleContentRef, visible: articleContentVisible } =
+    useInViewAnimation();
   return (
     <main className="font-sans ">
       {/* Hero Section */}
@@ -65,7 +71,7 @@ export const HomePage: React.FC = () => {
             window — not your whole life.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
           <div
             ref={benefit1Ref}
             className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2000 ${
@@ -140,28 +146,69 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Article Library Preview */}
-      <section className="bg-gray-50 py-20 px-6 shadow-md z-40 relative">
-        <h2 className="text-3xl font-bold text-center mb-10">
+      <section
+        className={`bg-linear-to-t from-emerald-800 to-gray-50 py-20 px-6 shadow-md z-40 relative transition duration-00 ease-in-out`}
+      >
+        <h2
+          ref={articleHeaderRef}
+          className={`text-3xl font-bold mb-10 lg:ml-30 transition duration-1200 ease-in-out ${
+            articleHeaderVisible
+              ? "translate-x-0 opacity-100"
+              : "translate-x-[-200px] opacity-0"
+          }`}
+        >
           Fuel Up on Knowledge. Fast With Confidence.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white shadow-md hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
-            <Link to={`/articles/10-benefits-of-fasting`}>
-              <h3 className="text-xl font-semibold mb-2">
-                10 real benefits of intermittent fasting
-              </h3>
-              <p className="text-gray-700">
-                Learn how fasting improves focus, metabolism, and overall
-                quality of life.
-              </p>
-            </Link>
+        <div
+          ref={articleContentRef}
+          className={`grid md:grid-cols-3 gap-4 w-full max-w-[1200px] mx-auto transition duration-1000 ease-in-out ${
+            articleContentVisible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-[80px] opacity-0"
+          }`}
+        >
+          <div className="col-span-2 row-span-2 bg-white shadow-md  p-6 rounded-xl">
+            <section className="bg-white py-20 px-6">
+              <h2 className="text-3xl font-bold text-center mb-10">
+                10 Real Benefits of Intermittent Fasting
+              </h2>
+
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left text-gray-800 list-disc list-inside">
+                <li>Mental clarity & sharper focus</li>
+                <li>Fat loss and better body composition</li>
+                <li>Improved insulin sensitivity</li>
+                <li>Reduced inflammation</li>
+                <li>Cellular cleanup (autophagy)</li>
+                <li>Better mitochondrial energy production</li>
+                <li>Hormone balance (insulin, ghrelin, HGH)</li>
+                <li>Improved digestion and gut rest</li>
+                <li>Better sleep quality</li>
+                <li>Healthier relationship with food</li>
+              </ul>
+
+              <div className="text-center mt-10">
+                <Link
+                  to={`/articles/10-benefits-of-fasting`}
+                  className="inline-block cta-dark text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition duration-300"
+                >
+                  Read the Full Article →
+                </Link>
+              </div>
+            </section>
           </div>
           <div className="bg-white shadow-sm hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
             <Link to={`/articles/coding-with-fasting`}>
               <h3 className="text-xl font-semibold mb-2">
                 How fasting helped my focus as a Developer
               </h3>
-              <p className="text-gray-700">
+              <div className="w-full h-[100px] overflow-hidden">
+                <img
+                  className="w-full h-full object-cover"
+                  src={brain}
+                  alt=""
+                />
+              </div>
+              <p className="text-gray-700 mt-2">
                 Personal story of mental clarity, productivity, and better
                 coding sessions.
               </p>
@@ -172,6 +219,9 @@ export const HomePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">
                 How intermittent fasting could help with depression
               </h3>
+              <div className="w-full h-[100px] overflow-hidden">
+                <img className="w-full h-full object-cover" src={mood} alt="" />
+              </div>
               <p className="text-gray-700">
                 Exploring a natural, science-backed angle to support mental
                 health — beyond meds.

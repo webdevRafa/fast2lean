@@ -18,8 +18,8 @@ export const useInViewAnimation = (): UseInViewAnimationReturn => {
                 }
             },
             {
-                threshold: 0.2,
-                rootMargin: '150px'
+                threshold: 0.4,
+                rootMargin: '0px'
             }
         );
 
