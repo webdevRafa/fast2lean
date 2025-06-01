@@ -2,6 +2,7 @@ import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import { Link } from "react-router-dom";
 import brain from "../assets/images/brain.png";
 import mood from "../assets/images/mood.png";
+import { KetoSection } from "../components/KetoSection";
 
 export const HomePage: React.FC = () => {
   const { ref: benefit1Ref, visible: benefit1Visible } = useInViewAnimation();
@@ -13,6 +14,9 @@ export const HomePage: React.FC = () => {
   const { ref: subRef, visible: subVisible } = useInViewAnimation();
   const { ref: buttonRef, visible: buttonVisible } = useInViewAnimation();
   const { ref: hookRef, visible: hookVisible } = useInViewAnimation();
+  const { ref: ketoIntroRef, visible: ketoIntroVisible } = useInViewAnimation();
+  const { ref: ketoIntroSubRef, visible: ketoIntroSubVisible } =
+    useInViewAnimation();
   const { ref: articleHeaderRef, visible: articleHeaderVisible } =
     useInViewAnimation();
   const { ref: articleContentRef, visible: articleContentVisible } =
@@ -126,7 +130,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Misconception Section */}
-      <section className="py-20 px-6 text-center hero">
+      <section className="py-20 md:py-30 px-6 text-center hero">
         <h2 className="text-3xl font-bold mb-4">
           “But Isn’t Fasting Just Starving Yourself?”
         </h2>
@@ -147,23 +151,23 @@ export const HomePage: React.FC = () => {
 
       {/* Article Library Preview */}
       <section
-        className={`bg-linear-to-t from-emerald-800 to-gray-50 py-20 px-6 shadow-md z-40 relative transition duration-00 ease-in-out`}
+        className={`bg-linear-to-t from-green-900 to-gray-50  px-6 shadow-md z-40 relative transition duration-00 ease-in-out`}
       >
         <h2
           ref={articleHeaderRef}
-          className={`text-3xl font-bold mb-10 lg:ml-30 transition duration-1200 ease-in-out ${
+          className={`max-w-[300px] md:max-w-[400px] bg-white border-green-700 border-2 rounded-md py-5 translate-y-[-50%] px-2 text-xl md:text-3xl font-bold lg:ml-30 transition duration-1200 ease-in-out ${
             articleHeaderVisible
               ? "translate-x-0 opacity-100"
               : "translate-x-[-200px] opacity-0"
           }`}
         >
-          Fuel Up on Knowledge. Fast With Confidence.
+          The Fast Track to Wellness
         </h2>
         <div
           ref={articleContentRef}
           className={`grid md:grid-cols-3 gap-4 w-full max-w-[1200px] mx-auto transition duration-1000 ease-in-out ${
             articleContentVisible
-              ? "translate-y-0 opacity-100"
+              ? "translate-y-10 opacity-100"
               : "translate-y-[80px] opacity-0"
           }`}
         >
@@ -189,7 +193,7 @@ export const HomePage: React.FC = () => {
               <div className="text-center mt-10">
                 <Link
                   to={`/articles/10-benefits-of-fasting`}
-                  className="inline-block cta-dark text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition duration-300"
+                  className="inline-block bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition duration-300"
                 >
                   Read the Full Article →
                 </Link>
@@ -232,23 +236,34 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Product Block */}
-      <section className="hero py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">
-          Products That Make Fasting Easier
-        </h2>
-        <p className="max-w-2xl mx-auto mb-10">
-          I only recommend what I actually use. These fasting drinks,
-          supplements, and books helped me stay consistent when I was starting
-          out.
-        </p>
-        <button
-          id="white"
-          className="cta-dark px-6 py-3 rounded-xl hover:bg-gray-800 transition duration-300"
-        >
-          Browse Recommended Products →
-        </button>
+      <section className="hero py-30 px-6 text-center">
+        <div ref={ketoIntroRef}>
+          <h2
+            className={`text-3xl font-bold mb-6 transition duration-1000 ease-in-out ${
+              ketoIntroVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-[30px] opacity-0"
+            }`}
+          >
+            Intermittent fasting is powerful — but pairing it with the right
+            fuel takes it even further.
+          </h2>
+        </div>
+        <div ref={ketoIntroSubRef}>
+          <p
+            className={`max-w-2xl text-lg mx-auto mb-10 transition duration-1000 ease-in-out ${
+              ketoIntroSubVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-[30px] opacity-0"
+            }`}
+          >
+            That’s where the keto lifestyle comes in. When your body learns to
+            burn fat for fuel, you tap into sustained energy, mental clarity,
+            and fewer crashes. Let’s break it down.
+          </p>
+        </div>
       </section>
-
+      <KetoSection />
       {/* Newsletter Signup */}
       <section className="bg-white py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">
