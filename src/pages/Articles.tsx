@@ -51,7 +51,7 @@ const Articles: React.FC = () => {
       </div>
 
       {/* Articles Grid */}
-      <section className="grid md:grid-cols-2 gap-8">
+      <section className="grid md:grid-cols-3 gap-8">
         {filteredArticles.length > 0 ? (
           filteredArticles.map(({ id, data }) => (
             <Link
