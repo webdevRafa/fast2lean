@@ -2,6 +2,7 @@ import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import { Link } from "react-router-dom";
 import brain from "../assets/images/brain.png";
 import mood from "../assets/images/mood.png";
+import { KetoSection } from "../components/KetoSection";
 
 export const HomePage: React.FC = () => {
   const { ref: headerRef, visible: headerVisible } = useInViewAnimation();
@@ -36,8 +37,8 @@ export const HomePage: React.FC = () => {
             subVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
           }`}
         >
-          Fasting isn’t starving. It’s timing. And it could change how you feel
-          — mentally, physically, and emotionally.
+          Learn about Intermittent Fasting and what it could do for you —
+          mentally, physically, and emotionally.
         </p>
         <div ref={buttonRef}>
           <button
@@ -251,7 +252,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
       {/* keto section goes below */}
-
+      <KetoSection />
       {/* Newsletter Signup */}
       <section className="bg-white py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">
