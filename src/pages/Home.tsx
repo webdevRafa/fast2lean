@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import brain from "../assets/images/brain.png";
 import mood from "../assets/images/mood.png";
 import { KetoSection } from "../components/KetoSection";
+import { BenefitSlider } from "../components/BenefitSlider";
 
 export const HomePage: React.FC = () => {
   const { ref: headerRef, visible: headerVisible } = useInViewAnimation();
-  const { ref: benefitsRef, visible: benefitsVisible } = useInViewAnimation();
   const { ref: subRef, visible: subVisible } = useInViewAnimation();
-  const { ref: buttonRef, visible: buttonVisible } = useInViewAnimation();
-  const { ref: hookRef, visible: hookVisible } = useInViewAnimation();
   const { ref: ketoIntroRef, visible: ketoIntroVisible } = useInViewAnimation();
   const { ref: ketoIntroSubRef, visible: ketoIntroSubVisible } =
     useInViewAnimation();
@@ -40,88 +38,11 @@ export const HomePage: React.FC = () => {
           Learn about Intermittent Fasting and what it could do for you —
           mentally, physically, and emotionally.
         </p>
-        <div ref={buttonRef}>
-          <button
-            id="white"
-            className={`mt-8 cta-dark text-white font-semibold px-6 py-3 rounded-xl hover:bg-gray-300 transition duration-1300 ease-out delay-0 md:delay-3000 ${
-              buttonVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-[60px] opacity-0"
-            }`}
-          >
-            See the Benefits
-          </button>
-        </div>
+        <div></div>
       </section>
 
       {/* Why Fasting Matters */}
-      <section className="bg-white py-20 px-6 text-center shadow-md z-40 relative">
-        <div
-          ref={hookRef}
-          className={`transition duration-1000 delay-0 md:delay-1500 ${
-            hookVisible
-              ? "translate-x-0 opacity-100"
-              : "translate-x-[-100px] opacity-0"
-          }`}
-        >
-          <h2 className="text-3xl font-bold mb-4">One Habit. Many Benefits.</h2>
-          <p className="max-w-3xl mx-auto text-lg mb-10">
-            Fasting improves energy, focus, sleep, digestion, insulin
-            sensitivity, and even inflammation. All from changing your eating
-            window — not your whole life.
-          </p>
-        </div>
-        <div
-          ref={benefitsRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto"
-        >
-          <div
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2000 ${
-              benefitsVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-20 opacity-0"
-            }`}
-          >
-            🔋 Boosts energy & focus
-          </div>
-          <div
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2100 ${
-              benefitsVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-20 opacity-0"
-            }`}
-          >
-            🔥 Helps burn fat more efficiently
-          </div>
-          <div
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2200 ${
-              benefitsVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-20 opacity-0"
-            }`}
-          >
-            🧠 Improves brain function
-          </div>
-          <div
-            className={`benefit will-change-transform p-6 rounded-xl transition duration-800 delay-0 md:delay-2300 ${
-              benefitsVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-20 opacity-0"
-            }`}
-          >
-            💪 Reduces inflammation & joint pain
-          </div>
-          <div
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2400 ${
-              benefitsVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-20 opacity-0"
-            }`}
-          >
-            🕒 Encourages discipline & food awareness
-          </div>
-        </div>
-      </section>
+      <BenefitSlider />
 
       {/* Misconception Section */}
       <section className="py-20 md:py-30 px-6 text-center hero">
