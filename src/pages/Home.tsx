@@ -2,7 +2,6 @@ import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import { Link } from "react-router-dom";
 import brain from "../assets/images/brain.png";
 import mood from "../assets/images/mood.png";
-import { KetoSection } from "../components/KetoSection";
 
 export const HomePage: React.FC = () => {
   const { ref: benefit1Ref, visible: benefit1Visible } = useInViewAnimation();
@@ -141,12 +140,6 @@ export const HomePage: React.FC = () => {
           your body time to repair, balance hormones, and function the way it
           was meant to.
         </p>
-        <button
-          id="white"
-          className="mt-10 cta-dark font-semibold px-6 py-3 rounded-xl hover:bg-gray-800 transition duration-300"
-        >
-          Learn: What Fasting Can Do For You →
-        </button>
       </section>
 
       {/* Article Library Preview */}
@@ -155,7 +148,7 @@ export const HomePage: React.FC = () => {
       >
         <h2
           ref={articleHeaderRef}
-          className={`max-w-[300px] md:max-w-[400px] bg-white border-green-700 border-2 rounded-md py-5 translate-y-[-50%] px-2 text-xl md:text-3xl font-bold lg:ml-30 transition duration-1200 ease-in-out ${
+          className={`max-w-[300px] md:max-w-[400px] bg-white shadow-md rounded-md py-5 translate-y-[-50%] px-2 text-xl md:text-3xl font-bold lg:ml-30 transition duration-1200 ease-in-out ${
             articleHeaderVisible
               ? "translate-x-0 opacity-100"
               : "translate-x-[-200px] opacity-0"
@@ -263,7 +256,8 @@ export const HomePage: React.FC = () => {
           </p>
         </div>
       </section>
-      <KetoSection />
+      {/* keto section goes below */}
+
       {/* Newsletter Signup */}
       <section className="bg-white py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">

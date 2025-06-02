@@ -36,22 +36,22 @@ const Articles: React.FC = () => {
   );
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-center mb-8">Articles</h1>
+    <main className="max-w-[1600px] mt-20 hero mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold text-center mb-8">LIBRARY</h1>
 
       {/* Search Bar */}
-      <div className="max-w-[1500px] mx-auto mb-10 sticky top-10 bg-body py-2">
+      <div className="mx-auto mb-10 sticky top-10 py-2 hero">
         <input
           type="text"
           value={searchTag}
           onChange={(e) => setSearchTag(e.target.value)}
           placeholder="Search by tag (e.g. keto, fasting, health)..."
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+          className="w-full bg-white border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
         />
       </div>
 
       {/* Articles Grid */}
-      <section className="grid md:grid-cols-3 gap-8">
+      <section className="grid md:grid-cols-1 gap-8">
         {filteredArticles.length > 0 ? (
           filteredArticles.map(({ id, data }) => (
             <Link
