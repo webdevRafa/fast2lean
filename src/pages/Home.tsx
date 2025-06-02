@@ -4,11 +4,6 @@ import brain from "../assets/images/brain.png";
 import mood from "../assets/images/mood.png";
 
 export const HomePage: React.FC = () => {
-  const { ref: benefit1Ref, visible: benefit1Visible } = useInViewAnimation();
-  const { ref: benefit2Ref, visible: benefit2Visible } = useInViewAnimation();
-  const { ref: benefit3Ref, visible: benefit3Visible } = useInViewAnimation();
-  const { ref: benefit4Ref, visible: benefit4Visible } = useInViewAnimation();
-  const { ref: benefit5Ref, visible: benefit5Visible } = useInViewAnimation();
   const { ref: headerRef, visible: headerVisible } = useInViewAnimation();
   const { ref: subRef, visible: subVisible } = useInViewAnimation();
   const { ref: buttonRef, visible: buttonVisible } = useInViewAnimation();
@@ -76,52 +71,27 @@ export const HomePage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
           <div
-            ref={benefit1Ref}
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2000 ${
-              benefit1Visible
-                ? "translate-y-0 opacity-100 translate-x-0"
-                : "translate-y-[-400px] translate-x-[-240px] opacity-0"
-            }`}
+            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2000`}
           >
             🔋 Boosts energy & focus
           </div>
           <div
-            ref={benefit2Ref}
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2100 ${
-              benefit2Visible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-[-400px] opacity-0"
-            }`}
+            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2100`}
           >
             🔥 Helps burn fat more efficiently
           </div>
           <div
-            ref={benefit3Ref}
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2200 ${
-              benefit3Visible
-                ? "translate-y-0 opacity-100 translate-x-0"
-                : "translate-y-[-400px] translate-x-[240px] opacity-0"
-            }`}
+            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2200`}
           >
             🧠 Improves brain function
           </div>
           <div
-            ref={benefit4Ref}
-            className={`benefit will-change-transform p-6 rounded-xl transition duration-800 delay-0 md:delay-2300 ${
-              benefit4Visible
-                ? "translate-y-0 opacity-100 translate-x-0"
-                : "translate-y-[200px] translate-x-[-240px] opacity-0"
-            }`}
+            className={`benefit will-change-transform p-6 rounded-xl transition duration-800 delay-0 md:delay-2300`}
           >
             💪 Reduces inflammation & joint pain
           </div>
           <div
-            ref={benefit5Ref}
-            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2400 ${
-              benefit5Visible
-                ? "translate-y-0 opacity-100 translate-x-0"
-                : "translate-y-[200px] opacity-0"
-            }`}
+            className={`benefit p-6 rounded-xl transition duration-800 delay-0 md:delay-2400 `}
           >
             🕒 Encourages discipline & food awareness
           </div>
