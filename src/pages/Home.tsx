@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import { BenefitSlider } from "../components/BenefitSlider";
-import brain from "../assets/images/brain.png";
-import mood from "../assets/images/mood.png";
 import clock from "../assets/images/clock.jpg";
 import brainGut from "../assets/images/brain-gut.png";
 
