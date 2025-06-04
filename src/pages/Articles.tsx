@@ -16,7 +16,7 @@ const tagOptions = [
   "energy",
   "productivity",
   "weight loss",
-  "gut-health",
+  "gut health",
 ];
 
 const Articles: React.FC = () => {
@@ -62,7 +62,7 @@ const Articles: React.FC = () => {
           <button
             key={tag}
             onClick={() => setActiveTag(activeTag === tag ? "" : tag)}
-            className={`px-4 py-2 rounded-full border transition ${
+            className={`cursor-pointer px-4 py-2 rounded-full border transition ${
               activeTag === tag
                 ? "bg-green-700 text-white"
                 : "bg-green-100 text-green-700"

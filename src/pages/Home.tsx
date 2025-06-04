@@ -106,7 +106,7 @@ export const HomePage: React.FC = () => {
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <Link
-            to="/diets/ketogenic"
+            to="/diets/ketogenic-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
             <h3 className="text-xl font-semibold mb-2">🥓 Ketogenic</h3>
@@ -115,21 +115,21 @@ export const HomePage: React.FC = () => {
             </p>
           </Link>
           <Link
-            to="/diets/mediterranean"
+            to="/diets/mediterranean-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
             <h3 className="text-xl font-semibold mb-2">🌿 Mediterranean</h3>
             <p>Olive oil, fish, greens — simple and sustainable.</p>
           </Link>
           <Link
-            to="/diets/paleo"
+            to="/diets/paleo-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
             <h3 className="text-xl font-semibold mb-2">🦴 Paleo</h3>
             <p>No grains, no gimmicks. Eat like a human was designed to.</p>
           </Link>
           <Link
-            to="/diets/vegan"
+            to="/diets/vegan-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
             <h3 className="text-xl font-semibold mb-2">🌱 Vegan</h3>
@@ -153,7 +153,7 @@ export const HomePage: React.FC = () => {
       {/* ARTICLES */}
       <section
         ref={articlesRef}
-        className={`py-24 px-6 bg-white transition duration-1000 ease-in-out ${
+        className={`py-24 px-6 hero transition duration-1000 ease-in-out ${
           articlesVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >

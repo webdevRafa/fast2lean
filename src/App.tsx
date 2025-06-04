@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { About } from "./pages/About";
 import ArticlePage from "./pages/ArticlePage";
 import Articles from "./pages/Articles";
+import ScrollToTop from "./components/ScrollToTop";
 
 // diet pages
 import { IntermittentFastingPage } from "./pages/diets/IntermittentFasting";
@@ -18,6 +19,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />

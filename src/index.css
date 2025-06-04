@@ -12,9 +12,7 @@ body {
 .bg-body, .benefit {
   background-color: #F3F6F4;
 }
-h1, h2, p, button, ul, li {
-  color: #4e4d4d;
-}
+
 
 .cta {
   background-color: #00C896;
