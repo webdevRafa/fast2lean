@@ -1,187 +1,238 @@
-import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import { Link } from "react-router-dom";
+import { useInViewAnimation } from "../hooks/useInViewAnimation";
+import { BenefitSlider } from "../components/BenefitSlider";
 import brain from "../assets/images/brain.png";
 import mood from "../assets/images/mood.png";
-import { KetoSection } from "../components/KetoSection";
-import { BenefitSlider } from "../components/BenefitSlider";
+import clock from "../assets/images/clock.jpg";
+import brainGut from "../assets/images/brain-gut.png";
 
 export const HomePage: React.FC = () => {
-  const { ref: headerRef, visible: headerVisible } = useInViewAnimation();
-  const { ref: subRef, visible: subVisible } = useInViewAnimation();
-  const { ref: ketoIntroRef, visible: ketoIntroVisible } = useInViewAnimation();
-  const { ref: ketoIntroSubRef, visible: ketoIntroSubVisible } =
-    useInViewAnimation();
-  const { ref: articleHeaderRef, visible: articleHeaderVisible } =
-    useInViewAnimation();
-  const { ref: articleContentRef, visible: articleContentVisible } =
-    useInViewAnimation();
+  const { ref: heroRef, visible: heroVisible } = useInViewAnimation();
+  const { ref: moodRef, visible: moodVisible } = useInViewAnimation();
+  const { ref: dietsRef, visible: dietsVisible } = useInViewAnimation();
+  const { ref: toolsRef, visible: toolsVisible } = useInViewAnimation();
+  const { ref: articlesRef, visible: articlesVisible } = useInViewAnimation();
+
   return (
-    <main className="font-sans ">
-      {/* Hero Section */}
-      <section className="text-white py-24 px-6 text-center hero">
-        <h1
-          ref={headerRef}
-          className={`text-4xl md:text-5xl font-bold mb-4 transition duration-1000 ease-in-out ${
-            headerVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-[60px] opacity-0"
-          }`}
-        >
-          What You Eat Matters. But When You Eat? That’s the Game-Changer.
-        </h1>
-        <p
-          ref={subRef}
-          className={`text-lg md:text-xl max-w-2xl mx-auto transition duration-1000 ease-in-out delay-200 ${
-            subVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
-          }`}
-        >
-          Learn about Intermittent Fasting and what it could do for you —
-          mentally, physically, and emotionally.
-        </p>
-        <div></div>
-      </section>
-
-      {/* Why Fasting Matters */}
-      <BenefitSlider />
-
-      {/* Misconception Section */}
-      <section className="py-20 md:py-30 px-6 text-center hero">
-        <h2 className="text-3xl font-bold mb-4">
-          “But Isn’t Fasting Just Starving Yourself?”
-        </h2>
-        <p className="max-w-3xl mx-auto text-lg">
-          Not at all. Fasting isn’t about eating <strong>less</strong> — it’s
-          about eating <strong>smarter</strong>. You still consume your daily
-          calories, just within a smaller eating window. That small shift gives
-          your body time to repair, balance hormones, and function the way it
-          was meant to.
-        </p>
-      </section>
-
-      {/* Article Library Preview */}
-      <section
-        className={`bg-linear-to-t from-green-900 to-gray-50  px-6 shadow-md z-40 relative transition duration-00 ease-in-out`}
-      >
-        <h2
-          ref={articleHeaderRef}
-          className={`max-w-[300px] md:max-w-[400px] bg-white shadow-md rounded-md py-5 translate-y-[-50%] px-2 text-xl md:text-3xl font-bold lg:ml-30 transition duration-1200 ease-in-out ${
-            articleHeaderVisible
-              ? "translate-x-0 opacity-100"
-              : "translate-x-[-200px] opacity-0"
-          }`}
-        >
-          The Fast Track to Wellness
-        </h2>
+    <main className="font-sans text-gray-900">
+      {/* HERO */}
+      <section className="bg-white py-24 px-6 hero">
         <div
-          ref={articleContentRef}
-          className={`grid md:grid-cols-3 gap-4 w-full max-w-[1200px] mx-auto transition duration-1000 ease-in-out ${
-            articleContentVisible
-              ? "translate-y-10 opacity-100"
-              : "translate-y-[80px] opacity-0"
+          ref={heroRef}
+          className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 transition duration-1000 ease-in-out ${
+            heroVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
           }`}
         >
-          <div className="md:col-span-2 md:row-span-2 bg-white shadow-md  p-6 rounded-xl">
-            <section className="bg-white py-5 md:py-20 px-2 md:px-6">
-              <h2 className="text-3xl font-bold text-center mb-10">
-                10 Real Benefits of Intermittent Fasting
-              </h2>
-
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left text-gray-800 list-disc list-inside">
-                <li>Mental clarity & sharper focus</li>
-                <li>Fat loss and better body composition</li>
-                <li>Improved insulin sensitivity</li>
-                <li>Reduced inflammation</li>
-                <li>Cellular cleanup (autophagy)</li>
-                <li>Better mitochondrial energy production</li>
-                <li>Hormone balance (insulin, ghrelin, HGH)</li>
-                <li>Improved digestion and gut rest</li>
-                <li>Better sleep quality</li>
-                <li>Healthier relationship with food</li>
-              </ul>
-
-              <div className="text-center mt-10">
-                <Link
-                  to={`/articles/10-benefits-of-fasting`}
-                  className="inline-block bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition duration-300"
-                >
-                  Read the Full Article →
-                </Link>
-              </div>
-            </section>
-          </div>
-          <div className="bg-white shadow-sm hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
-            <Link to={`/articles/coding-with-fasting`}>
-              <h3 className="text-xl font-semibold mb-2">
-                How fasting helped my focus as a Developer
-              </h3>
-              <div className="w-full h-[100px] overflow-hidden">
-                <img
-                  className="w-full h-full object-cover"
-                  src={brain}
-                  alt=""
-                />
-              </div>
-              <p className="text-gray-700 mt-2">
-                Personal story of mental clarity, productivity, and better
-                coding sessions.
-              </p>
+          <div className="md:w-1/2 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              What You Eat Matters. But When You Eat? That’s the Game-Changer.
+            </h1>
+            <p className="text-lg mb-6">
+              Learn about Intermittent Fasting and what it could do for you —
+              mentally, physically, and emotionally.
+            </p>
+            <Link
+              to="/diets/intermittent-fasting"
+              className="inline-block cta-dark text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
+            >
+              Learn About IF →
             </Link>
           </div>
-          <div className="bg-white shadow-sm hover:scale-105 transition duration-300 cursor-pointer p-6 rounded-xl">
-            <Link to={`/articles/bdnf-and-depression`}>
-              <h3 className="text-xl font-semibold mb-2">
-                How intermittent fasting could help with depression
-              </h3>
-              <div className="w-full h-[100px] overflow-hidden">
-                <img className="w-full h-full object-cover" src={mood} alt="" />
-              </div>
-              <p className="text-gray-700">
-                Exploring a natural, science-backed angle to support mental
-                health — beyond meds.
-              </p>
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={clock}
+              alt="Brain clarity"
+              className="w-[300px] md:w-[400px] h-auto rounded-xl shadow-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFITS */}
+
+      <div className="bg-white">
+        <BenefitSlider />
+      </div>
+
+      {/* MOOD SECTION */}
+      <section
+        ref={moodRef}
+        className={`bg-white py-5 px-6 transition duration-1000 ease-in-out ${
+          moodVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto md:flex items-center gap-12">
+          <div className="md:w-1/2">
+            <img
+              src={brainGut}
+              alt="Mood & hormones"
+              className="rounded-xl shadow-lg md:max-w-[360px] lg:max-w-[400px] md:translate-y-[20%]"
+            />
+          </div>
+          <div className="md:w-1/2 mt-10 md:mt-0">
+            <h2 className="text-3xl font-bold mb-4">
+              Fasting Isn’t Just Physical
+            </h2>
+            <p className="text-lg mb-4">
+              Your energy. Your mood. Your cravings. It’s all connected. Fasting
+              helps rebalance hormones like ghrelin and leptin so your body —
+              and your mind — finally get in sync.
+            </p>
+            <Link
+              to="/articles"
+              className="text-blue-700 underline font-medium"
+            >
+              Explore the benefits →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Product Block */}
-      <section className="hero py-30 px-6 text-center">
-        <div ref={ketoIntroRef}>
-          <h2
-            className={`text-3xl font-bold mb-6 transition duration-1000 ease-in-out ${
-              ketoIntroVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-[30px] opacity-0"
-            }`}
-          >
-            Intermittent fasting is powerful — but pairing it with the right
-            fuel takes it even further.
-          </h2>
-        </div>
-        <div ref={ketoIntroSubRef}>
-          <p
-            className={`max-w-2xl text-lg mx-auto mb-10 transition duration-1000 ease-in-out ${
-              ketoIntroSubVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-[30px] opacity-0"
-            }`}
-          >
-            That’s where the keto lifestyle comes in. When your body learns to
-            burn fat for fuel, you tap into sustained energy, mental clarity,
-            and fewer crashes. Let’s break it down.
-          </p>
-        </div>
-      </section>
-      {/* keto section goes below */}
-      <KetoSection />
-      {/* Newsletter Signup */}
-      <section className="bg-white py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Want a Simpler Start to Fasting?
+      {/* DIET STACK */}
+      <section
+        ref={dietsRef}
+        className={`bg-gradient-to-t from-green-800 to-white py-24 px-6 transition duration-1000 ease-in-out ${
+          dietsVisible ? "opacity-100" : "opacity-0 translate-y-6"
+        }`}
+      >
+        <h2 className="text-4xl font-bold text-center mb-10">
+          Explore What Works For You
         </h2>
-        <p className="max-w-xl mx-auto mb-6">
-          Get my free 7-day Fasting Jumpstart Guide. Everything I wish I had
-          when I started — simple, real, and zero fluff.
+        <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
+          Once you’ve got your timing down, here are some styles of eating that
+          pair beautifully with fasting.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <Link
+            to="/diets/ketogenic"
+            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">🥓 Ketogenic</h3>
+            <p>
+              Low-carb, high-fat fuel. Great with fasting for energy + focus.
+            </p>
+          </Link>
+          <Link
+            to="/diets/mediterranean"
+            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">🌿 Mediterranean</h3>
+            <p>Olive oil, fish, greens — simple and sustainable.</p>
+          </Link>
+          <Link
+            to="/diets/paleo"
+            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">🦴 Paleo</h3>
+            <p>No grains, no gimmicks. Eat like a human was designed to.</p>
+          </Link>
+          <Link
+            to="/diets/vegan"
+            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">🌱 Vegan</h3>
+            <p>Plant-based without losing performance or nutrients.</p>
+          </Link>
+          <Link
+            to="/diets/intermittent-fasting"
+            className="text-white underline col-span-full text-center"
+          >
+            Learn About Intermittent Fasting →
+          </Link>
+          <Link
+            to="/diets/compare"
+            className="text-white underline col-span-full text-center"
+          >
+            Compare All Diets →
+          </Link>
+        </div>
+      </section>
+
+      {/* ARTICLES */}
+      <section
+        ref={articlesRef}
+        className={`py-24 px-6 bg-white transition duration-1000 ease-in-out ${
+          articlesVisible ? "opacity-100" : "opacity-0 translate-y-6"
+        }`}
+      >
+        <h2 className="text-4xl font-bold text-center mb-10">
+          Real Stories, Honest Wins
+        </h2>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <Link
+            to="/articles/10-benefits-of-fasting"
+            className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">
+              10 Real Benefits of Fasting
+            </h3>
+            <p>
+              From better sleep to sharper thinking — it’s more than weight
+              loss.
+            </p>
+          </Link>
+          <Link
+            to="/articles/coding-with-fasting"
+            className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">
+              How I Coded Better by Eating Later
+            </h3>
+            <p>
+              Fasting didn’t make me a genius — it helped me stay clear and
+              sharp.
+            </p>
+          </Link>
+          <Link
+            to="/articles/bdnf-and-depression"
+            className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">
+              Fasting & Depression: A Brain Chemistry Shift
+            </h3>
+            <p>BDNF, neurogenesis, and why your mood might improve.</p>
+          </Link>
+        </div>
+        <Link
+          to="/articles"
+          className="block mt-6 text-center text-blue-700 underline font-medium"
+        >
+          Browse All Articles →
+        </Link>
+      </section>
+
+      {/* TOOLS */}
+      <section
+        ref={toolsRef}
+        className={`bg-gray-900 text-white py-24 px-6 transition duration-1000 ease-in-out ${
+          toolsVisible ? "opacity-100" : "opacity-0 translate-y-6"
+        }`}
+      >
+        <h2 className="text-4xl font-bold text-center mb-6">
+          Tools I Keep Coming Back To
+        </h2>
+        <p className="text-center max-w-2xl mx-auto mb-10 text-lg">
+          No fluff. Just the gear, supplements, and simple routines that help
+          make fasting feel easy and sustainable.
+        </p>
+        <div className="text-center">
+          <Link
+            to="/resources"
+            className="inline-block bg-white text-black px-6 py-3 rounded-xl hover:bg-gray-200 transition"
+          >
+            Explore My Toolkit
+          </Link>
+        </div>
+      </section>
+
+      {/* NEWSLETTER */}
+      <section className="bg-gradient-to-br from-white to-gray-100 py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-4">Start Where You Are</h2>
+        <p className="max-w-xl mx-auto mb-6 text-lg">
+          I’ll send you my 7-day fasting guide — no rules, no guilt, just tools
+          to get started feeling better.
         </p>
         <form className="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
           <input
