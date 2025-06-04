@@ -49,7 +49,9 @@ export const CompareDietsPage: React.FC = () => {
           up — side by side.
         </p>
       </section>
-
+      <div className="md:hidden flex justify-center text-gray-400 text-xs mt-2 animate-pulse">
+        👉 Swipe right to view more
+      </div>
       <div className="overflow-x-auto">
         <table className="min-w-[600px] w-full text-left border rounded-xl overflow-hidden">
           <thead className="bg-gray-100">
