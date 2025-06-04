@@ -1,10 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/Home";
 import { Navbar } from "./components/Navbar";
-import { IntermittentFasting } from "./pages/IntermittentFasting";
 import { About } from "./pages/About";
 import ArticlePage from "./pages/ArticlePage";
 import Articles from "./pages/Articles";
+
+// diet pages
+import { IntermittentFastingPage } from "./pages/diets/IntermittentFasting";
+import { KetogenicDietPage } from "./pages/diets/KetogenicDietPage";
+import { MediterraneanDietPage } from "./pages/diets/MediterraneanDietPage";
+import { PaleoDietPage } from "./pages/diets/PaleoDietPage";
+import { VeganDietPage } from "./pages/diets/VeganDietPage";
+import { CompareDietsPage } from "./pages/diets/CompareDietsPage";
 
 function App() {
   return (
@@ -17,9 +24,17 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:slug" element={<ArticlePage />} />
           <Route
-            path="/intermittent-fasting"
-            element={<IntermittentFasting />}
+            path="/diets/intermittent-fasting"
+            element={<IntermittentFastingPage />}
           />
+          <Route path="/diets/ketogenic-diet" element={<KetogenicDietPage />} />
+          <Route
+            path="/diets/mediterranean-diet"
+            element={<MediterraneanDietPage />}
+          />
+          <Route path="/diets/paleo-diet" element={<PaleoDietPage />} />
+          <Route path="/diets/vegan-diet" element={<VeganDietPage />} />
+          <Route path="/diets/compare" element={<CompareDietsPage />} />
         </Routes>
       </BrowserRouter>
     </>

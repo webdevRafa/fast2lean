@@ -128,6 +128,12 @@ export const Navbar: React.FC = () => {
               >
                 <div className="py-1">Vegan Diet</div>
               </Link>
+              <Link
+                to="/diets/compare"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="py-1">Compare Diets</div>
+              </Link>
             </div>
           )}
 
