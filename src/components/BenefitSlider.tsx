@@ -20,7 +20,7 @@ const benefits = [
 
 export const BenefitSlider: React.FC = () => {
   return (
-    <div className="relative w-full z-40">
+    <div className="relative w-full z-40 overflow-hidden">
       <style>
         {`
           @keyframes scroll {
