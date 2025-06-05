@@ -10,18 +10,13 @@ const benefits = [
   "🧽 Promotes autophagy — cellular cleanup and renewal",
   " 🧬 Supports mitochondrial health — better energy production at the cellular level",
   " 💉 Improves insulin sensitivity — lowers risk of type 2 diabetes",
-  " 🌙 Enhances sleep quality by improving melatonin rhythm and hormone balance",
+  " 🌙 Enhances sleep quality",
   " 🦠 Supports gut rest & digestive health — reduces bloating and improves gut lining",
-  " ⛑️ May trigger hormesis — making your body more resilient to stress",
   " 💖 Lowers inflammation markers linked to heart disease",
-  " 🔄 Balances hormones — especially ghrelin, leptin, and growth hormone",
-  " 🧘‍♂️ Improves mental clarity & calm due to stable blood sugar",
-  " 💭 Promotes mindful eating — resets your relationship with hunger",
+  " 🧘‍♂️ Improves mental clarity",
   " 🧪 Might reduce risk of neurodegenerative diseases (like Alzheimer’s & Parkinson’s)",
-  " 🧱 Helps retain lean muscle during fat loss (especially when paired with strength training)",
-  " 📈 Increases human growth hormone (HGH) — especially during longer fasts",
-  " 🔄 May support longevity & anti-aging through metabolic regulation",
-  " 🎯 Reduces caloric intake naturally without strict calorie counting",
+  " 🧱 Helps retain lean muscle during fat loss",
+  " 🔄 May support longevity & anti-aging",
 ];
 
 export const BenefitSlider: React.FC = () => {

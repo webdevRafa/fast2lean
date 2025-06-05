@@ -22,8 +22,8 @@ export const WhatIsFasting: React.FC = () => {
           <br className="hidden md:block" />
           <br />
           Whether you’re eating 2 meals or 3 within your window, the goal is to
-          give your body a break, not deprive it. It’s structure — not
-          restriction.
+          give your body a break, not deprive it. <br />{" "}
+          <strong>It’s structure — not restriction.</strong>
         </p>
       </div>
     </section>

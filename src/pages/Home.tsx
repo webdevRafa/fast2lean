@@ -46,9 +46,10 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* BENEFITS */}
-      <div className="bg-white">
-        <WhatIsFasting />
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6">
+
+      <WhatIsFasting />
+      <div className="cta-dark py-4">
+        <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
           Why People Love Intermittent Fasting
         </h2>
         <BenefitSlider />
