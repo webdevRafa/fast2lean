@@ -30,7 +30,7 @@ const tools = [
     id: "grocery-list",
     title: "🛒 Grocery List Generator",
     description: "Build your grocery list based on your chosen diet.",
-    link: "/tools/grocery-list",
+    link: "/tools/grocery-list-generator",
   },
   {
     id: "supplement-matcher",

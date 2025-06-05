@@ -11,6 +11,9 @@ import { Tools } from "./pages/Tools";
 import { FastingSchedule } from "./pages/tools/FastingSchedule";
 import { MacroCalculator } from "./pages/tools/MacroCalculator";
 import { MealExamples } from "./pages/tools/MealExamples";
+import { KetosisQuiz } from "./pages/tools/KetosisQuiz";
+import { GroceryListGenerator } from "./pages/tools/GroceryListGenerator";
+import { SupplementMatcher } from "./pages/tools/SupplementMatcher";
 
 // diet pages
 import { IntermittentFastingPage } from "./pages/diets/IntermittentFasting";
@@ -47,6 +50,15 @@ function App() {
           <Route path="/tools/fasting-schedule" element={<FastingSchedule />} />
           <Route path="/tools/macro-calculator" element={<MacroCalculator />} />
           <Route path="/tools/meal-examples" element={<MealExamples />} />
+          <Route path="/tools/ketosis-quiz" element={<KetosisQuiz />} />
+          <Route
+            path="/tools/supplement-matcher"
+            element={<SupplementMatcher />}
+          />
+          <Route
+            path="/tools/grocery-list-generator"
+            element={<GroceryListGenerator />}
+          />
         </Routes>
       </BrowserRouter>
     </>
