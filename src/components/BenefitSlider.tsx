@@ -26,7 +26,7 @@ const benefits = [
 
 export const BenefitSlider: React.FC = () => {
   return (
-    <div className="relative w-full overflow-hidden py-12">
+    <div className="relative w-full z-40">
       <style>
         {`
           @keyframes scroll {
@@ -46,7 +46,7 @@ export const BenefitSlider: React.FC = () => {
         {[...benefits, ...benefits].map((text, i) => (
           <div
             key={i}
-            className="cursor-pointer min-w-[280px] md:min-w-[300px] mx-2 p-4 rounded-xl bg-white shadow-md text-center"
+            className="cursor-pointer min-w-[280px] md:min-w-[300px] mx-2 p-4 rounded-xl bg-white shadow-md text-center translate-y-[-10px] z-40 relative"
           >
             {text}
           </div>

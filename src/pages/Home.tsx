@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
-import { BenefitSlider } from "../components/BenefitSlider";
 import clock from "../assets/images/clock.jpg";
 import brainGut from "../assets/images/brain-gut.png";
+
+// components
+import { WhatIsFasting } from "../components/WhatIsFasting";
+import { BenefitSlider } from "../components/BenefitSlider";
 
 export const HomePage: React.FC = () => {
   const { ref: heroRef, visible: heroVisible } = useInViewAnimation();
@@ -14,10 +17,10 @@ export const HomePage: React.FC = () => {
   return (
     <main className="font-sans text-gray-900">
       {/* HERO */}
-      <section className="bg-white py-24 px-6 hero">
+      <section className="bg-white py-24 px-6 hero relative z-30">
         <div
           ref={heroRef}
-          className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 transition duration-1000 ease-in-out ${
+          className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 transition duration-1000 ease-in-out relative z-30${
             heroVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-6"
@@ -31,12 +34,6 @@ export const HomePage: React.FC = () => {
               Learn about Intermittent Fasting and what it could do for you —
               mentally, physically, and emotionally.
             </p>
-            <Link
-              to="/diets/intermittent-fasting"
-              className="inline-block cta-dark text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
-            >
-              Learn About IF →
-            </Link>
           </div>
           <div className="md:w-1/2 flex justify-center">
             <img
@@ -49,8 +46,11 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* BENEFITS */}
-
       <div className="bg-white">
+        <WhatIsFasting />
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6">
+          Why People Love Intermittent Fasting
+        </h2>
         <BenefitSlider />
       </div>
 
@@ -70,13 +70,10 @@ export const HomePage: React.FC = () => {
             />
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
-            <h2 className="text-3xl font-bold mb-4">
-              Fasting Isn’t Just Physical
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">More than just physical</h2>
             <p className="text-lg mb-4">
-              Your energy. Your mood. Your cravings. It’s all connected. Fasting
-              helps rebalance hormones like ghrelin and leptin so your body —
-              and your mind — finally get in sync.
+              Fasting affects your mind, your energy, your mood — not just your
+              waistline.
             </p>
             <Link
               to="/articles"
@@ -99,10 +96,10 @@ export const HomePage: React.FC = () => {
           Explore What Works For You
         </h2>
         <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-          Once you’ve got your timing down, here are some styles of eating that
-          pair beautifully with fasting.
+          No strict rules here. Just simple eating styles that align with your
+          goals and make fasting even more effective.
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto">
           <Link
             to="/diets/ketogenic-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
