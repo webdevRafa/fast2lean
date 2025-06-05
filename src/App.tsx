@@ -6,6 +6,10 @@ import ArticlePage from "./pages/ArticlePage";
 import Articles from "./pages/Articles";
 import ScrollToTop from "./components/ScrollToTop";
 
+import { Tools } from "./pages/Tools";
+// tools
+import { FastingSchedule } from "./pages/tools/FastingSchedule";
+
 // diet pages
 import { IntermittentFastingPage } from "./pages/diets/IntermittentFasting";
 import { KetogenicDietPage } from "./pages/diets/KetogenicDietPage";
@@ -13,6 +17,8 @@ import { MediterraneanDietPage } from "./pages/diets/MediterraneanDietPage";
 import { PaleoDietPage } from "./pages/diets/PaleoDietPage";
 import { VeganDietPage } from "./pages/diets/VeganDietPage";
 import { CompareDietsPage } from "./pages/diets/CompareDietsPage";
+
+// tool pages
 
 function App() {
   return (
@@ -29,6 +35,7 @@ function App() {
             path="/diets/intermittent-fasting"
             element={<IntermittentFastingPage />}
           />
+          <Route path="/tools" element={<Tools />} />
           <Route path="/diets/ketogenic-diet" element={<KetogenicDietPage />} />
           <Route
             path="/diets/mediterranean-diet"
@@ -37,6 +44,7 @@ function App() {
           <Route path="/diets/paleo-diet" element={<PaleoDietPage />} />
           <Route path="/diets/vegan-diet" element={<VeganDietPage />} />
           <Route path="/diets/compare" element={<CompareDietsPage />} />
+          <Route path="/tools/fasting-schedule" element={<FastingSchedule />} />
         </Routes>
       </BrowserRouter>
     </>
