@@ -22,13 +22,19 @@ export const Navbar: React.FC = () => {
           </Link>
 
           <li
-            className="group relative cursor-pointer"
+            className="relative cursor-pointer"
             onClick={() => setShowDietsDropdown((prev) => !prev)}
             onMouseEnter={() => setShowDietsDropdown(true)}
             onMouseLeave={() => setShowDietsDropdown(false)}
           >
-            <span>Diets</span>
-            <ul className="absolute hidden group-hover:block bg-white shadow-md py-2 w-48 rounded-md top-full left-0 z-50">
+            <span className="flex items-center gap-1">
+              Diets <FiChevronDown className="mt-[1px]" />
+            </span>
+            <ul
+              className={`absolute bg-white shadow-md py-2 w-48 rounded-md top-full left-0 z-50 transition-opacity duration-200 ${
+                showDietsDropdown ? "block" : "hidden"
+              }`}
+            >
               <li className="px-4 py-2 hover:bg-gray-100">
                 <Link to="/diets/intermittent-fasting">
                   Intermittent Fasting
