@@ -15,10 +15,10 @@ const tools = [
     link: "/tools/macro-calculator",
   },
   {
-    id: "meal-planner",
-    title: "🍽️ Daily Meal Planner",
+    id: "meal-examples",
+    title: "🍽️ Meal Examples",
     description: "Get keto/fasting meal ideas based on your goals.",
-    link: "/tools/meal-planner",
+    link: "/tools/meal-examples",
   },
   {
     id: "ketosis-quiz",

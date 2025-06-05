@@ -7,8 +7,10 @@ import Articles from "./pages/Articles";
 import ScrollToTop from "./components/ScrollToTop";
 
 import { Tools } from "./pages/Tools";
-// tools
+// tool pages
 import { FastingSchedule } from "./pages/tools/FastingSchedule";
+import { MacroCalculator } from "./pages/tools/MacroCalculator";
+import { MealExamples } from "./pages/tools/MealExamples";
 
 // diet pages
 import { IntermittentFastingPage } from "./pages/diets/IntermittentFasting";
@@ -17,8 +19,6 @@ import { MediterraneanDietPage } from "./pages/diets/MediterraneanDietPage";
 import { PaleoDietPage } from "./pages/diets/PaleoDietPage";
 import { VeganDietPage } from "./pages/diets/VeganDietPage";
 import { CompareDietsPage } from "./pages/diets/CompareDietsPage";
-
-// tool pages
 
 function App() {
   return (
@@ -45,6 +45,8 @@ function App() {
           <Route path="/diets/vegan-diet" element={<VeganDietPage />} />
           <Route path="/diets/compare" element={<CompareDietsPage />} />
           <Route path="/tools/fasting-schedule" element={<FastingSchedule />} />
+          <Route path="/tools/macro-calculator" element={<MacroCalculator />} />
+          <Route path="/tools/meal-examples" element={<MealExamples />} />
         </Routes>
       </BrowserRouter>
     </>
