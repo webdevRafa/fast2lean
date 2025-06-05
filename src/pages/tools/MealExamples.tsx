@@ -163,8 +163,382 @@ const mealPlans: Record<string, Record<string, MealPlanStructure>> = {
       ],
     },
     // Add maintenance and muscle-gain sections the same way (can continue if you'd like)
+    maintenance: {
+      breakfast: [
+        {
+          title: "Scrambled Eggs",
+          description: "With spinach and sweet potatoes",
+        },
+        { title: "Banana Pancakes", description: "Made with almond flour" },
+        {
+          title: "Avocado & Smoked Salmon",
+          description: "On sweet potato slices",
+        },
+        {
+          title: "Chia Pudding",
+          description: "With almond milk and fresh fruit",
+        },
+        { title: "Bacon & Berries", description: "With a side of nuts" },
+      ],
+      lunch: [
+        {
+          title: "Grilled Chicken Salad",
+          description: "With olive oil and seeds",
+        },
+        {
+          title: "Beef Lettuce Wraps",
+          description: "With avocado and veggies",
+        },
+        {
+          title: "Paleo Chili",
+          description: "With sweet potatoes and ground turkey",
+        },
+        { title: "Zucchini Noodles", description: "With meat sauce" },
+        {
+          title: "Stuffed Bell Peppers",
+          description: "With cauliflower rice and beef",
+        },
+      ],
+      dinner: [
+        { title: "Pork Chops", description: "With sautéed apples and cabbage" },
+        { title: "Baked Salmon", description: "With asparagus and lemon" },
+        {
+          title: "Roasted Chicken",
+          description: "With brussels sprouts and carrots",
+        },
+        { title: "Stuffed Sweet Potatoes", description: "With shredded beef" },
+        {
+          title: "Beef Stir-Fry",
+          description: "With mixed veggies and coconut oil",
+        },
+      ],
+    },
+    "muscle-gain": {
+      breakfast: [
+        { title: "Steak & Eggs", description: "With roasted veggies" },
+        { title: "Sweet Potato Hash", description: "With sausage and eggs" },
+        {
+          title: "Almond Butter Smoothie",
+          description: "With banana and spinach",
+        },
+        { title: "Egg Muffins", description: "With veggies and ground beef" },
+        {
+          title: "Paleo Power Bowl",
+          description: "With nuts, seeds, and fruit",
+        },
+      ],
+      lunch: [
+        {
+          title: "Grilled Turkey Burger",
+          description: "With avocado and salad",
+        },
+        {
+          title: "Paleo Burrito Bowl",
+          description: "With beef, cauliflower rice, and guac",
+        },
+        { title: "Roast Beef Wraps", description: "Using lettuce leaves" },
+        {
+          title: "Chicken Drumsticks",
+          description: "With sweet potato wedges",
+        },
+        {
+          title: "Ground Bison Bowl",
+          description: "With roasted root veggies",
+        },
+      ],
+      dinner: [
+        { title: "Lamb Chops", description: "With rosemary carrots" },
+        { title: "Stuffed Zucchini", description: "With chicken and herbs" },
+        {
+          title: "BBQ Chicken Thighs",
+          description: "With mixed greens and avocado",
+        },
+        { title: "Paleo Sloppy Joe", description: "With baked sweet potato" },
+        {
+          title: "Grilled Steak",
+          description: "With mushrooms and roasted squash",
+        },
+      ],
+    },
   },
+  mediterranean: {
+    "fat-loss": {
+      breakfast: [
+        { title: "Greek Yogurt", description: "With berries and chia seeds" },
+        { title: "Oatmeal", description: "With walnuts and cinnamon" },
+        {
+          title: "Poached Eggs",
+          description: "On whole grain toast with tomatoes",
+        },
+        {
+          title: "Smoothie",
+          description: "With spinach, banana, and flaxseed",
+        },
+        { title: "Cottage Cheese", description: "With sliced peaches" },
+      ],
+      lunch: [
+        { title: "Tuna Salad", description: "With olive oil and chickpeas" },
+        { title: "Lentil Soup", description: "With whole grain roll" },
+        { title: "Hummus Wrap", description: "With greens and cucumbers" },
+        { title: "Stuffed Bell Peppers", description: "With quinoa and feta" },
+        { title: "Grilled Shrimp", description: "With cucumber tomato salad" },
+      ],
+      dinner: [
+        { title: "Baked Cod", description: "With olives and roasted tomatoes" },
+        { title: "Vegetable Stir-Fry", description: "With brown rice" },
+        { title: "Chicken Skewers", description: "With tzatziki and greens" },
+        { title: "Stuffed Eggplant", description: "With garlic and herbs" },
+        {
+          title: "Whole Grain Pasta",
+          description: "With marinara and grilled veggies",
+        },
+      ],
+    },
+    maintenance: {
+      breakfast: [
+        {
+          title: "Whole Grain Toast",
+          description: "With olive oil and poached egg",
+        },
+        { title: "Greek Yogurt", description: "With granola and fruit" },
+        { title: "Boiled Eggs", description: "With fruit and cucumber" },
+        { title: "Avocado Toast", description: "With herbs and tomato" },
+        { title: "Chia Bowl", description: "With dates and walnuts" },
+      ],
+      lunch: [
+        { title: "Grilled Chicken Salad", description: "With olives and feta" },
+        {
+          title: "Pasta Salad",
+          description: "With veggies and lemon vinaigrette",
+        },
+        { title: "Lentil Bowl", description: "With roasted carrots" },
+        { title: "Falafel Plate", description: "With hummus and tabbouleh" },
+        { title: "Stuffed Tomatoes", description: "With rice and herbs" },
+      ],
+      dinner: [
+        { title: "Salmon Filet", description: "With quinoa and spinach" },
+        { title: "Moussaka", description: "With eggplant and lamb" },
+        { title: "Roasted Chicken", description: "With potatoes and olives" },
+        { title: "Seafood Stew", description: "With garlic and white wine" },
+        { title: "Pesto Pasta", description: "With arugula and pine nuts" },
+      ],
+    },
+    "muscle-gain": {
+      breakfast: [
+        {
+          title: "Protein Smoothie",
+          description: "With Greek yogurt and oats",
+        },
+        {
+          title: "Egg & Veggie Scramble",
+          description: "With whole grain toast",
+        },
+        { title: "Peanut Butter Oatmeal", description: "With banana slices" },
+        {
+          title: "Avocado Toast",
+          description: "With cottage cheese and herbs",
+        },
+        {
+          title: "Mediterranean Omelet",
+          description: "With tomatoes, olives, and feta",
+        },
+      ],
+      lunch: [
+        { title: "Grilled Chicken Bowl", description: "With rice and hummus" },
+        {
+          title: "Tuna Pasta Salad",
+          description: "With greens and lemon dressing",
+        },
+        { title: "Beef Pita Wrap", description: "With garlic sauce" },
+        { title: "Eggplant Wrap", description: "With quinoa and goat cheese" },
+        {
+          title: "Grain Bowl",
+          description: "With falafel, chickpeas, and tahini",
+        },
+      ],
+      dinner: [
+        {
+          title: "Steak & Roasted Veggies",
+          description: "With herbed potatoes",
+        },
+        {
+          title: "Stuffed Peppers",
+          description: "With ground beef and brown rice",
+        },
+        {
+          title: "Grilled Swordfish",
+          description: "With lemon parsley marinade",
+        },
+        { title: "Chicken Tagine", description: "With olives and apricots" },
+        { title: "Seafood Orzo", description: "With spinach and tomato" },
+      ],
+    },
+  },
+  vegan: {
+    "fat-loss": {
+      breakfast: [
+        {
+          title: "Chia Pudding",
+          description: "With almond milk and strawberries",
+        },
+        { title: "Tofu Scramble", description: "With spinach and onions" },
+        {
+          title: "Overnight Oats",
+          description: "With flaxseed, banana, and berries",
+        },
+        {
+          title: "Green Smoothie",
+          description: "With kale, pineapple, and chia",
+        },
+        {
+          title: "Whole Grain Toast",
+          description: "With almond butter and hemp seeds",
+        },
+      ],
+      lunch: [
+        {
+          title: "Quinoa Salad",
+          description: "With black beans, avocado, and lime",
+        },
+        {
+          title: "Lentil Bowl",
+          description: "With roasted sweet potato and tahini",
+        },
+        {
+          title: "Vegan Sushi",
+          description: "With cucumber, carrot, and avocado",
+        },
+        { title: "Tempeh Wrap", description: "With hummus and lettuce" },
+        {
+          title: "Buddha Bowl",
+          description: "With chickpeas and roasted veggies",
+        },
+      ],
+      dinner: [
+        { title: "Zucchini Noodles", description: "With tomato lentil sauce" },
+        {
+          title: "Stuffed Bell Peppers",
+          description: "With quinoa and black beans",
+        },
+        {
+          title: "Cauliflower Stir-Fry",
+          description: "With tofu and coconut aminos",
+        },
+        {
+          title: "Vegan Chili",
+          description: "With beans, tomatoes, and avocado",
+        },
+        { title: "Mushroom Lentil Loaf", description: "With steamed broccoli" },
+      ],
+    },
+    maintenance: {
+      breakfast: [
+        {
+          title: "Tofu Scramble",
+          description: "With spinach and bell peppers",
+        },
+        { title: "Chia Pudding", description: "With almond milk and banana" },
+        { title: "Overnight Oats", description: "With flaxseed and berries" },
+        { title: "Avocado Toast", description: "With tomato and hemp seeds" },
+        {
+          title: "Smoothie Bowl",
+          description: "With almond butter and granola",
+        },
+      ],
+      lunch: [
+        {
+          title: "Lentil Salad",
+          description: "With cucumber, tomato, and olive oil",
+        },
+        {
+          title: "Sweet Potato & Chickpea Bowl",
+          description: "With tahini drizzle",
+        },
+        {
+          title: "Stuffed Bell Peppers",
+          description: "With quinoa and black beans",
+        },
+        {
+          title: "Hummus Wrap",
+          description: "With spinach and shredded carrots",
+        },
+        {
+          title: "Grilled Veggie Bowl",
+          description: "With brown rice and avocado",
+        },
+      ],
+      dinner: [
+        {
+          title: "Black Bean Tacos",
+          description: "With guacamole and cabbage",
+        },
+        {
+          title: "Vegan Stir-Fry",
+          description: "With tofu, broccoli, and sesame oil",
+        },
+        { title: "Lentil Bolognese", description: "Over whole wheat pasta" },
+        {
+          title: "Stuffed Zucchini Boats",
+          description: "With mushrooms and lentils",
+        },
+        {
+          title: "Coconut Curry",
+          description: "With chickpeas and sweet potato",
+        },
+      ],
+    },
 
+    "muscle-gain": {
+      breakfast: [
+        {
+          title: "High-Protein Smoothie",
+          description: "With pea protein, oats, and almond butter",
+        },
+        { title: "Tofu & Black Bean Scramble", description: "With avocado" },
+        { title: "Chickpea Pancakes", description: "With spinach and tahini" },
+        { title: "Protein Oatmeal", description: "With banana and chia seeds" },
+        {
+          title: "Tempeh Breakfast Wrap",
+          description: "With veggies and hummus",
+        },
+      ],
+      lunch: [
+        {
+          title: "Tempeh Buddha Bowl",
+          description: "With quinoa and roasted veggies",
+        },
+        {
+          title: "Seitan Stir-Fry",
+          description: "With broccoli and coconut aminos",
+        },
+        { title: "Lentil Curry", description: "With brown rice and greens" },
+        {
+          title: "Black Bean Burrito Bowl",
+          description: "With avocado and lime",
+        },
+        {
+          title: "Vegan Power Bowl",
+          description: "With tofu, farro, and tahini sauce",
+        },
+      ],
+      dinner: [
+        {
+          title: "Vegan Chili",
+          description: "With lentils, beans, and avocado",
+        },
+        {
+          title: "Stuffed Sweet Potatoes",
+          description: "With black beans and corn",
+        },
+        {
+          title: "BBQ Tempeh",
+          description: "With mashed cauliflower and greens",
+        },
+        { title: "Vegan Pasta", description: "With walnut pesto and broccoli" },
+        { title: "Tofu Tikka Masala", description: "With brown rice and peas" },
+      ],
+    },
+  },
   // Add mediterranean and vegan similarly
 };
 
