@@ -8,7 +8,6 @@ const benefits = [
   "💪 Reduces inflammation & joint pain",
   "✨ Supports skin health",
   "🧽 Promotes autophagy — cellular cleanup and renewal",
-  " 🧬 Supports mitochondrial health — better energy production at the cellular level",
   " 💉 Improves insulin sensitivity — lowers risk of type 2 diabetes",
   " 🌙 Enhances sleep quality",
   " 🦠 Supports gut rest & digestive health — reduces bloating and improves gut lining",

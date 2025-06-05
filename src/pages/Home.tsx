@@ -35,7 +35,7 @@ export const HomePage: React.FC = () => {
               mentally, physically, and emotionally.
             </p>
           </div>
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 justify-center hidden md:flex">
             <img
               src={clock}
               alt="Brain clarity"
