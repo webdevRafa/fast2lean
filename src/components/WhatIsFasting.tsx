@@ -1,6 +1,6 @@
 export const WhatIsFasting: React.FC = () => {
   return (
-    <section className="bg-white  px-6 md:px-12 relative z-40 md:py-10">
+    <section className="bg-white  px-6 md:px-12 relative z-40 pt-5 md:pt-10 md:pb-20">
       <div className="max-w-5xl mx-auto rounded-2xl shadow-md bg-gray-50 p-8 md:p-12 ">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 bg-white p-2 rounded-2xl shadow-md">
           🕐 What Is Intermittent Fasting?

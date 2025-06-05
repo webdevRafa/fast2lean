@@ -6,7 +6,7 @@ const benefits = [
   "🔥 Helps burn fat more efficiently",
   "🧠 Improves brain function",
   "💪 Reduces inflammation & joint pain",
-  "🕒 Encourages discipline & food awareness",
+  "✨ Supports skin health",
   "🧽 Promotes autophagy — cellular cleanup and renewal",
   " 🧬 Supports mitochondrial health — better energy production at the cellular level",
   " 💉 Improves insulin sensitivity — lowers risk of type 2 diabetes",
