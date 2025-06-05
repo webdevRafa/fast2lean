@@ -3,6 +3,12 @@ import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import clock from "../assets/images/clock.jpg";
 import brainGut from "../assets/images/brain-gut.png";
 
+// images
+import keto from "../assets/svgs/keto.svg";
+import paleo from "../assets/svgs/paleo.svg";
+import medi from "../assets/svgs/medi.svg";
+import vegan from "../assets/svgs/vegan.svg";
+
 // components
 import { WhatIsFasting } from "../components/WhatIsFasting";
 import { BenefitSlider } from "../components/BenefitSlider";
@@ -89,47 +95,69 @@ export const HomePage: React.FC = () => {
       {/* DIET STACK */}
       <section
         ref={dietsRef}
-        className={`bg-gradient-to-t from-green-800 to-white py-24 px-6 transition duration-1000 ease-in-out ${
+        className={`bg-gradient-to-t from-green-800 to-white py-24 transition duration-1000 ease-in-out ${
           dietsVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >
-        <h2 className="text-4xl font-bold text-center mb-10">
-          Explore What Works For You
+        <h2 className="text-4xl font-bold text-center mb-5 bg-green-800 text-white py-4 max-w-[1400px] mx-auto">
+          Discover what's best for you
         </h2>
         <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-          No strict rules here. Just simple eating styles that align with your
-          goals and make fasting even more effective.
+          The best diet is the one that works for you — long term. These styles
+          are flexible, sustainable, and fasting-friendly.
         </p>
         <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto">
           <Link
             to="/diets/ketogenic-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
-            <h3 className="text-xl font-semibold mb-2">🥓 Ketogenic</h3>
-            <p>
-              Low-carb, high-fat fuel. Great with fasting for energy + focus.
-            </p>
+            <div className="flex gap-5">
+              <img className="max-w-[100px]" src={keto} alt="" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Ketogenic</h3>
+
+                <p>
+                  Low-carb, high-fat fuel. Great with fasting for energy +
+                  focus.
+                </p>
+              </div>
+            </div>
           </Link>
           <Link
             to="/diets/mediterranean-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
-            <h3 className="text-xl font-semibold mb-2">🌿 Mediterranean</h3>
-            <p>Olive oil, fish, greens — simple and sustainable.</p>
+            <div className="flex gap-5">
+              <img className="max-w-[100px]" src={medi} alt="" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Mediterranean</h3>
+                <p>Olive oil, fish, greens — simple and sustainable.</p>
+              </div>
+            </div>
           </Link>
           <Link
             to="/diets/paleo-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
-            <h3 className="text-xl font-semibold mb-2">🦴 Paleo</h3>
-            <p>No grains, no gimmicks. Eat like a human was designed to.</p>
+            <div className="flex gap-5">
+              <img className="max-w-[100px]" src={paleo} alt="" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Paleo</h3>
+                <p>No grains, no gimmicks. Eat like a human was designed to.</p>
+              </div>
+            </div>
           </Link>
           <Link
             to="/diets/vegan-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
           >
-            <h3 className="text-xl font-semibold mb-2">🌱 Vegan</h3>
-            <p>Plant-based without losing performance or nutrients.</p>
+            <div className="flex gap-5">
+              <img className="max-w-[100px]" src={vegan} alt="" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Vegan</h3>
+                <p>Plant-based without losing performance or nutrients.</p>
+              </div>
+            </div>
           </Link>
           <Link
             to="/diets/intermittent-fasting"
@@ -154,7 +182,7 @@ export const HomePage: React.FC = () => {
         }`}
       >
         <h2 className="text-4xl font-bold text-center mb-10">
-          Real Stories, Honest Wins
+          Articles worth reading
         </h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <Link
@@ -174,11 +202,11 @@ export const HomePage: React.FC = () => {
             className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
           >
             <h3 className="text-xl font-semibold mb-2">
-              How I Coded Better by Eating Later
+              How IF helped me code better
             </h3>
             <p>
-              Fasting didn’t make me a genius — it helped me stay clear and
-              sharp.
+              More focus, less fog. Fasting helped me get into flow — and stay
+              there.
             </p>
           </Link>
           <Link
