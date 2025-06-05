@@ -21,7 +21,12 @@ export const Navbar: React.FC = () => {
             <li>Home</li>
           </Link>
 
-          <li className="group relative cursor-pointer">
+          <li
+            className="group relative cursor-pointer"
+            onClick={() => setShowDietsDropdown((prev) => !prev)}
+            onMouseEnter={() => setShowDietsDropdown(true)}
+            onMouseLeave={() => setShowDietsDropdown(false)}
+          >
             <span>Diets</span>
             <ul className="absolute hidden group-hover:block bg-white shadow-md py-2 w-48 rounded-md top-full left-0 z-50">
               <li className="px-4 py-2 hover:bg-gray-100">
