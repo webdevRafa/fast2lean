@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
+import intermittent from "../../assets/images/if-illustration.png";
 
 const benefits = [
   "🔋 Boosts energy & focus",
@@ -24,7 +25,11 @@ export const IntermittentFastingPage: React.FC = () => {
           enhance your health, and unlock sustainable energy."
         />
       </section>
-
+      <img
+        className="mx-auto md:max-w-[700px] w-full mb-10"
+        src={intermittent}
+        alt=""
+      />
       {/* What is IF? */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">
