@@ -1,7 +1,20 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-
+@supports (-webkit-touch-callout: none) {
+  .fastinghero {
+    background-attachment: scroll !important; /* disable fixed */
+    background-size: cover;
+    background-position: center;
+  }
+}
+.fastinghero {
+  background-image: url('../src/assets/images/treadmill.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keep for desktop */
+}
 .hero {
   background-image: url('../src/assets/images/hero-img.png');
   background-size: cover;
