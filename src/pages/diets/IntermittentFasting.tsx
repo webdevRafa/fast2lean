@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
-import intermittent from "../../assets/images/if-illustration.png";
+import intermittent from "../../assets/images/if-ill.webp";
 
 const benefits = [
   "🔋 Boosts energy & focus",
