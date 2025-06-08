@@ -1,5 +1,5 @@
 import React from "react";
-import fastingImg from "../assets/images/brain.png"; // optional image
+import fastingImg from "../assets/logos/f2l-orb.svg"; // optional image
 
 export const WhatIsFasting: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ export const WhatIsFasting: React.FC = () => {
           <img
             src={fastingImg}
             alt="Fasting Window Illustration"
-            className="rounded-2xl shadow-lg w-full"
+            className="shadow-lg w-full max-w-[250px] p-5"
           />
         </div>
 
