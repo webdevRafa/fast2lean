@@ -41,11 +41,7 @@ export const KetogenicDietPage: React.FC = () => {
           subtitle="A high-fat, low-carb lifestyle that rewires your metabolism — and your mind — to run on clean, sustainable fuel."
         />
       </section>
-      <img
-        className="mx-auto md:max-w-[700px] w-full mb-10"
-        src={keto}
-        alt=""
-      />
+      <img className="mx-auto md:max-h-[400px] mb-10" src={keto} alt="" />
       {/* What is Keto */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">What is the Keto Diet?</h2>

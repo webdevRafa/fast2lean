@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
+import vegan from "../../assets/images/vegan.webp";
 
 const veganFoods = [
   "🥦 Vegetables & leafy greens",
@@ -41,7 +42,7 @@ export const VeganDietPage: React.FC = () => {
           subtitle="A lifestyle and nutritional path focused on plant-based foods — and a growing movement for health, sustainability, and compassion."
         />
       </section>
-
+      <img className="mx-auto md:max-h-[400px] mb-10" src={vegan} alt="" />
       {/* What is Veganism */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">

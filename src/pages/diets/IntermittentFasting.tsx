@@ -26,7 +26,7 @@ export const IntermittentFastingPage: React.FC = () => {
         />
       </section>
       <img
-        className="mx-auto md:max-w-[700px] w-full mb-10"
+        className="mx-auto md:max-h-[400px] mb-10"
         src={intermittent}
         alt=""
       />

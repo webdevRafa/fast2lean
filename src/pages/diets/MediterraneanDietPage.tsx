@@ -42,11 +42,7 @@ export const MediterraneanDietPage: React.FC = () => {
           subtitle="A timeless way of eating rooted in simplicity, community, and vibrant whole foods — proven to promote long-term health."
         />
       </section>
-      <img
-        className="mx-auto md:max-w-[700px] w-full mb-10"
-        src={mediDiet}
-        alt=""
-      />
+      <img className="mx-auto md:max-h-[400px] mb-10" src={mediDiet} alt="" />
       {/* What is it */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">
