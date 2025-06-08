@@ -8,7 +8,7 @@ import keto from "../assets/svgs/keto.svg";
 import paleo from "../assets/svgs/paleo.svg";
 import medi from "../assets/svgs/medi.svg";
 import vegan from "../assets/svgs/vegan.svg";
-
+import diets from "../assets/images/various-diets.webp";
 // components
 import { WhatIsFasting } from "../components/WhatIsFasting";
 import { BenefitSlider } from "../components/BenefitSlider";
@@ -109,6 +109,12 @@ export const HomePage: React.FC = () => {
           The best diet is the one that works for you — long term. These styles
           are flexible, sustainable, and fasting-friendly.
         </p>
+        <img
+          data-aos="fade-up"
+          className="mx-auto w-full md:max-w-[800px] mb-10"
+          src={diets}
+          alt=""
+        />
         <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto">
           <Link
             to="/diets/ketogenic-diet"
