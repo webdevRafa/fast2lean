@@ -42,7 +42,7 @@ const benefits = [
 
 const FastingBenefitsSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-10 lg:px-20 bg-[url('/src/assets/images/treadmill.webp')] bg-cover bg-center bg-no-repeat sm:bg-fixed">
+    <section className="bg-white py-16 px-6 md:px-10 lg:px-20 fastinghero bg-[url('/src/assets/images/treadmill.webp')] bg-cover bg-center bg-no-repeat bg-fixed md:bg-fixed sm:bg-scroll">
       <div className="max-w-6xl mx-auto text-center">
         <h2
           className="text-white text-3xl md:text-4xl font-bold mb-6"
