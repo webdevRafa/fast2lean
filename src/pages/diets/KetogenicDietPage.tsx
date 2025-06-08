@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
-
+import keto from "../../assets/images/keto-diet-illustration.png";
 const ketoFoods = [
   "🥑 Avocados",
   "🥩 Grass-fed meats",
@@ -41,7 +41,7 @@ export const KetogenicDietPage: React.FC = () => {
           subtitle="A high-fat, low-carb lifestyle that rewires your metabolism — and your mind — to run on clean, sustainable fuel."
         />
       </section>
-
+      <img className="mx-auto md:max-w-[700px] w-full" src={keto} alt="" />
       {/* What is Keto */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">What is the Keto Diet?</h2>
