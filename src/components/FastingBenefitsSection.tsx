@@ -45,15 +45,15 @@ const FastingBenefitsSection: React.FC = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
-          What could this do for you?
+          feel better. live better.
         </h2>
         <p
           className="text-lg text-gray-700 mb-12"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          This isn’t just about skipping meals — it’s about unlocking how your
-          body truly thrives.
+          with the benefits that fasting brings, you can unlock a better version
+          of yourself
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (

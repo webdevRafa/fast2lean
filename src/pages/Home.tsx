@@ -8,7 +8,8 @@ import keto from "../assets/svgs/keto.svg";
 import paleo from "../assets/svgs/paleo.svg";
 import medi from "../assets/svgs/medi.svg";
 import vegan from "../assets/svgs/vegan.svg";
-import diets from "../assets/images/various-diets.webp";
+import nutrition from "../assets/images/nutrition-facts.webp";
+
 // components
 import { WhatIsFasting } from "../components/WhatIsFasting";
 import { BenefitSlider } from "../components/BenefitSlider";
@@ -55,7 +56,7 @@ export const HomePage: React.FC = () => {
       {/* BENEFITS */}
 
       <WhatIsFasting />
-      <div className="cta-dark py-4">
+      <div className="bg-gray-700 py-4">
         <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
           Why People Love It
         </h2>
@@ -98,25 +99,25 @@ export const HomePage: React.FC = () => {
       {/* DIET STACK */}
       <section
         ref={dietsRef}
-        className={`bg-gradient-to-t from-lime-700 to-white py-24 transition duration-1000 ease-in-out ${
+        className={`bg-gradient-to-b from-gray-50 to-gray-400 py-24 transition duration-1000 ease-in-out ${
           dietsVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >
-        <h2 className="text-4xl font-bold text-center mb-5 cta-dark text-white py-4 max-w-[1400px] mx-auto">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-5  py-4 max-w-[1400px] mx-auto">
           Discover what's best for you
         </h2>
 
         <img
           data-aos="fade-up"
           className="mx-auto w-full md:max-w-[800px] mb-10"
-          src={diets}
+          src={nutrition}
           alt=""
         />
         <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
           The best diet is the one that works for you — long term. These styles
           are flexible, sustainable, and fasting-friendly.
         </p>
-        <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto px-4 md:px-0">
           <Link
             to="/diets/ketogenic-diet"
             className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
@@ -171,13 +172,13 @@ export const HomePage: React.FC = () => {
           </Link>
           <Link
             to="/diets/intermittent-fasting"
-            className="text-white underline col-span-full text-center"
+            className="underline col-span-full text-center"
           >
             Learn About Intermittent Fasting →
           </Link>
           <Link
             to="/diets/compare"
-            className="text-white underline col-span-full text-center"
+            className="underline col-span-full text-center"
           >
             Compare All Diets →
           </Link>
@@ -240,7 +241,7 @@ export const HomePage: React.FC = () => {
       {/* TOOLS */}
       <section
         ref={toolsRef}
-        className={`bg-gray-900 text-white py-24 px-6 transition duration-1000 ease-in-out ${
+        className={`bg-gray-900 py-24 px-6 transition duration-1000 ease-in-out ${
           toolsVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >
