@@ -1,7 +1,6 @@
-import fast2lean from "../assets/logos/fast2lean-darker.svg";
+import fast2lean from "../assets/logos/f2l-orb.svg";
 import { Link } from "react-router-dom";
 import mission from "../assets/svgs/mishi.svg";
-import roots from "../assets/svgs/roots.svg";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 
 export const About: React.FC = () => {
@@ -19,7 +18,7 @@ export const About: React.FC = () => {
         <div>
           <img className="h-[20px] mx-auto mb-0" src={fast2lean} alt="" />
           <p className="text-xl max-w-2xl mx-auto leading-relaxed opacity-40">
-            Fast forward your health. ABOUT.
+            Fast forward your health.
           </p>
         </div>
       </section>
@@ -35,7 +34,6 @@ export const About: React.FC = () => {
         }`}
       >
         <div>
-          <img className="w-[100px] mx-auto mb-0" src={roots} alt="" />
           <p className="text-xl max-w-2xl mx-auto leading-relaxed">
             I started Fast2Lean to share what helped me feel better — fasting,
             keto, smart supplements, and good habits that are sustainable. If

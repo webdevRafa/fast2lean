@@ -35,26 +35,28 @@ export const Navbar: React.FC = () => {
                 showDietsDropdown ? "block" : "hidden"
               }`}
             >
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to="/diets/intermittent-fasting">
+              <Link to="/diets/intermittent-fasting">
+                <li className="px-4 py-2 hover:bg-gray-100">
                   Intermittent Fasting
-                </Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to="/diets/ketogenic-diet">Ketogenic Diet</Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to="/diets/mediterranean-diet">Mediterranean Diet</Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to="/diets/paleo-diet">Paleo Diet</Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to="/diets/vegan-diet">Vegan Diet</Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to="/diets/compare">Compare Diets</Link>
-              </li>
+                </li>
+              </Link>
+              <Link to="/diets/ketogenic-diet">
+                <li className="px-4 py-2 hover:bg-gray-100">Ketogenic Diet</li>
+              </Link>
+              <Link to="/diets/mediterranean-diet">
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  Mediterranean Diet
+                </li>
+              </Link>
+              <Link to="/diets/paleo-diet">
+                <li className="px-4 py-2 hover:bg-gray-100">Paleo Diet</li>
+              </Link>
+              <Link to="/diets/vegan-diet">
+                <li className="px-4 py-2 hover:bg-gray-100">Vegan Diet</li>
+              </Link>
+              <Link to="/diets/compare">
+                <li className="px-4 py-2 hover:bg-gray-100">Compare Diets</li>
+              </Link>
             </ul>
           </li>
 

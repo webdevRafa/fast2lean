@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 
 .hero {
   background-image: url('../src/assets/images/hero-img.png');
@@ -12,14 +14,17 @@ body {
 .bg-body, .benefit {
   background-color: #F3F6F4;
 }
-
+h1, h2, p {
+  font-family: 'Inter', sans-serif;
+  font-weight: lighter;
+}
 
 .cta {
   background-color: #00C896;
   /* background-color: #ffa726; */
 }
 .cta-dark {
-  background-color: #2E7D32;
+  background-color: #225d25;
 }
 .border-green {
   border: 2px solid #2E7D32;

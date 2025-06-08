@@ -77,7 +77,9 @@ export const HomePage: React.FC = () => {
             />
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
-            <h2 className="text-3xl font-bold mb-4">More than just physical</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              It's more than just physical
+            </h2>
             <p className="text-lg mb-4">
               Fasting affects your mind, your energy, your mood — not just your
               waistline.
@@ -95,11 +97,11 @@ export const HomePage: React.FC = () => {
       {/* DIET STACK */}
       <section
         ref={dietsRef}
-        className={`bg-gradient-to-t from-green-800 to-white py-24 transition duration-1000 ease-in-out ${
+        className={`bg-gradient-to-t from-lime-700 to-white py-24 transition duration-1000 ease-in-out ${
           dietsVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >
-        <h2 className="text-4xl font-bold text-center mb-5 bg-green-800 text-white py-4 max-w-[1400px] mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-5 cta-dark text-white py-4 max-w-[1400px] mx-auto">
           Discover what's best for you
         </h2>
         <p className="text-center max-w-2xl mx-auto mb-12 text-lg">

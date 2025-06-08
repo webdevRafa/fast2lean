@@ -106,9 +106,7 @@ export const FastingSchedule: React.FC = () => {
             <h2 className="text-xl font-semibold text-gray-800 mb-1">
               Your Suggested Schedules:
             </h2>
-            <p className="mb-5">
-              <strong>Fasting:Eating</strong>
-            </p>
+
             <ul className="space-y-3">
               {schedules.map((schedule, index) => (
                 <li
