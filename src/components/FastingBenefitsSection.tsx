@@ -42,13 +42,16 @@ const benefits = [
 
 const FastingBenefitsSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
+    <section className="bg-white py-16 px-6 md:px-10 lg:px-20 fastinghero">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+        <h2
+          className="text-white text-3xl md:text-4xl font-bold mb-6"
+          data-aos="fade-up"
+        >
           feel better. live better.
         </h2>
         <p
-          className="text-lg text-gray-700 mb-12"
+          className="text-lg text-white mb-12"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -72,7 +75,7 @@ const FastingBenefitsSection: React.FC = () => {
           ))}
         </div>
         <p
-          className="mt-12 text-md text-gray-600"
+          className="mt-12 text-md text-white"
           data-aos="fade-up"
           data-aos-delay="600"
         >
