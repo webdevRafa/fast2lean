@@ -10,7 +10,7 @@ export const WhatIsFasting: React.FC = () => {
           <img
             src={fastingImg}
             alt="Fasting Window Illustration"
-            className="shadow-lg w-full max-w-[250px] p-5"
+            className="shadow-lg w-full max-w-[250px] md:max-w-[400px] p-5"
           />
         </div>
 
