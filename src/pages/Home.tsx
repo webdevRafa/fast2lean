@@ -105,16 +105,17 @@ export const HomePage: React.FC = () => {
         <h2 className="text-4xl font-bold text-center mb-5 cta-dark text-white py-4 max-w-[1400px] mx-auto">
           Discover what's best for you
         </h2>
-        <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-          The best diet is the one that works for you — long term. These styles
-          are flexible, sustainable, and fasting-friendly.
-        </p>
+
         <img
           data-aos="fade-up"
           className="mx-auto w-full md:max-w-[800px] mb-10"
           src={diets}
           alt=""
         />
+        <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
+          The best diet is the one that works for you — long term. These styles
+          are flexible, sustainable, and fasting-friendly.
+        </p>
         <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto">
           <Link
             to="/diets/ketogenic-diet"
