@@ -12,6 +12,7 @@ import vegan from "../assets/svgs/vegan.svg";
 // components
 import { WhatIsFasting } from "../components/WhatIsFasting";
 import { BenefitSlider } from "../components/BenefitSlider";
+import FastingBenefitsSection from "../components/FastingBenefitsSection";
 
 export const HomePage: React.FC = () => {
   const { ref: heroRef, visible: heroVisible } = useInViewAnimation();
@@ -50,13 +51,13 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
+      <FastingBenefitsSection />
       {/* BENEFITS */}
 
       <WhatIsFasting />
       <div className="cta-dark py-4">
         <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
-          Why People Love Intermittent Fasting
+          Why People Love It
         </h2>
         <BenefitSlider />
       </div>

@@ -5,7 +5,6 @@ import { About } from "./pages/About";
 import ArticlePage from "./pages/ArticlePage";
 import Articles from "./pages/Articles";
 import ScrollToTop from "./components/ScrollToTop";
-
 import { Tools } from "./pages/Tools";
 // tool pages
 import { FastingSchedule } from "./pages/tools/FastingSchedule";
@@ -22,8 +21,14 @@ import { MediterraneanDietPage } from "./pages/diets/MediterraneanDietPage";
 import { PaleoDietPage } from "./pages/diets/PaleoDietPage";
 import { VeganDietPage } from "./pages/diets/VeganDietPage";
 import { CompareDietsPage } from "./pages/diets/CompareDietsPage";
-
+// @ts-ignore
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
   return (
     <>
       <BrowserRouter>
