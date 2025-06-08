@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
-import mediDiet from "../../assets/images/medi-diet-illustration-cropped.png";
+import mediDiet from "../../assets/images/medi-diet-illustration-cropped.webp";
 const foodsToEnjoy = [
   "🥗 Vegetables & leafy greens",
   "🍇 Fresh fruits",

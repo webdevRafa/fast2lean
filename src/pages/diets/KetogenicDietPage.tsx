@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
-import keto from "../../assets/images/keto-diet-illustration.png";
+import keto from "../../assets/images/keto-diet-illustration.webp";
 const ketoFoods = [
   "🥑 Avocados",
   "🥩 Grass-fed meats",

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DietHeader } from "../../components/DietHeader";
+import paleo from "../../assets/images/paleo-ill.webp";
 
 const paleoFoods = [
   "🥩 Grass-fed meats",
@@ -41,7 +42,11 @@ export const PaleoDietPage: React.FC = () => {
           subtitle="Eat like your ancestors — whole, natural foods that your body is built to thrive on."
         />
       </section>
-
+      <img
+        className="mx-auto md:max-w-[700px] w-full mb-10"
+        src={paleo}
+        alt=""
+      />
       {/* What is Paleo */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">What Is the Paleo Diet?</h2>
