@@ -7,9 +7,21 @@
     background-size: cover;
     background-position: center;
   }
+  .benefitshero {
+    background-attachment: scroll !important; /* disable fixed */
+    background-size: cover;
+    background-position: center;
+  }
 }
 .fastinghero {
   background-image: url('../src/assets/images/treadmill.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keep for desktop */
+}
+.benefitshero {
+  background-image: url('../src/assets/images/joggers.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

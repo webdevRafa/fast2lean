@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import clock from "../assets/images/clock.jpg";
+import silhouette from "../assets/images/silhouette.webp";
+
 import brainGut from "../assets/images/brain-gut.png";
 
 // images
@@ -45,7 +47,7 @@ export const HomePage: React.FC = () => {
           </div>
           <div className="md:w-1/2 justify-center hidden md:flex">
             <img
-              src={clock}
+              src={silhouette}
               alt="Brain clarity"
               className="w-[300px] md:w-[400px] h-auto rounded-xl shadow-md"
             />
@@ -56,7 +58,7 @@ export const HomePage: React.FC = () => {
       {/* BENEFITS */}
 
       <WhatIsFasting />
-      <div className="bg-gray-700 py-4">
+      <div className="py-40 benefitshero">
         <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
           Why People Love It
         </h2>
