@@ -58,6 +58,8 @@ export const HomePage: React.FC = () => {
       {/* BENEFITS */}
 
       <WhatIsFasting />
+
+      {/* BENEFIT SCROLL SECTION */}
       <div className="py-40 benefitshero">
         <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
           Why People Love It

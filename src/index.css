@@ -32,7 +32,9 @@
   background-size: cover;
   background-position: center;
 }
-
+.dark {
+  background-color: rgb(17, 17, 17);
+}
 body {
   background-color: #F3F6F4;
 }

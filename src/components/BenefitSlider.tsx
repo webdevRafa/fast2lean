@@ -7,11 +7,11 @@ const benefits = [
   "🧠 Improves brain function",
   "💪 Reduces inflammation & joint pain",
   "✨ Supports skin health",
-  "🧽 Promotes autophagy — cellular cleanup and renewal",
+  "🧽 Promotes cellular health",
   " 💉 Improves insulin sensitivity — lowers risk of type 2 diabetes",
   " 🌙 Enhances sleep quality",
-  " 🦠 Supports gut rest & digestive health — reduces bloating and improves gut lining",
-  " 💖 Lowers inflammation markers linked to heart disease",
+  " 🦠 Supports gut health & reduces bloating",
+  " 💖 Lowers inflammation",
   " 🧘‍♂️ Improves mental clarity",
   " 🧪 Might reduce risk of neurodegenerative diseases (like Alzheimer’s & Parkinson’s)",
   " 🧱 Helps retain lean muscle during fat loss",
@@ -40,7 +40,7 @@ export const BenefitSlider: React.FC = () => {
         {[...benefits, ...benefits].map((text, i) => (
           <div
             key={i}
-            className="cursor-pointer min-w-[280px] md:min-w-[300px] mx-2 p-4 rounded-xl bg-white shadow-md text-center "
+            className="cursor-pointer text-white min-w-[280px] md:min-w-[300px] mx-2 p-4 rounded-xl dark shadow-md text-center border-green-400 border-2 "
           >
             {text}
           </div>

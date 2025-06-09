@@ -10,14 +10,14 @@ export const WhatIsFasting: React.FC = () => {
           <img
             src={fastingImg}
             alt="Fasting Window Illustration"
-            className="shadow-lg w-full  p-5"
+            className="shadow-lg w-full border-r-4 border-slate-950"
           />
         </div>
 
         {/* Content */}
         <div data-aos="fade-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            🕐 What Is Intermittent Fasting?
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 bg-gray-50 p-2">
+            What Is Intermittent Fasting?
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             Intermittent Fasting (IF) isn’t about <strong>what</strong> you eat
