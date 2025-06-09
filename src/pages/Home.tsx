@@ -102,89 +102,125 @@ export const HomePage: React.FC = () => {
       {/* DIET STACK */}
       <section
         ref={dietsRef}
-        className={`bg-gradient-to-b from-gray-50 to-gray-400 py-24 transition duration-1000 ease-in-out ${
+        className={`bg-gradient-to-b from-gray-800 to-black py-24 transition duration-1000 ease-in-out ${
           dietsVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-5  py-4 max-w-[1400px] mx-auto">
-          Discover what's best for you
-        </h2>
+        {/* grid container */}
+        <div className="flex flex-col md:flex-row items-start mx-auto w-full max-w-[1600px] gap-3 px-4">
+          {/* Left Side: Heading + Image + Paragraph */}
+          <div className="md:w-1/2 w-full text-center md:text-left">
+            <h2 className="text-2xl md:text-4xl font-bold mb-5 py-4 text-white">
+              Discover what's best for you
+            </h2>
 
-        <img
-          data-aos="fade-up"
-          className="mx-auto w-full md:max-w-[800px] mb-10"
-          src={nutrition}
-          alt=""
-        />
-        <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-          The best diet is the one that works for you — long term. These styles
-          are flexible, sustainable, and fasting-friendly.
-        </p>
-        <div className="grid md:grid-cols-2  gap-6 max-w-6xl mx-auto px-4 md:px-0">
-          <Link
-            to="/diets/ketogenic-diet"
-            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
-          >
-            <div className="flex gap-5">
-              <img className="max-w-[100px]" src={keto} alt="" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Ketogenic</h3>
+            <img
+              data-aos="fade-up"
+              className="mx-auto md:mx-0 w-full md:max-w-[700px] mb-10"
+              src={nutrition}
+              alt="Nutrition facts"
+            />
 
-                <p>
-                  Low-carb, high-fat fuel. Great with fasting for energy +
-                  focus.
-                </p>
-              </div>
+            <p className="text-lg max-w-xl mx-auto md:mx-0 mb-12 md:text-white">
+              The best diet is the one that works for you — long term. These
+              styles are flexible, sustainable, and fasting-friendly.
+            </p>
+          </div>
+
+          {/* Right Side: Diet Cards */}
+          <div className="md:w-1/2 w-full">
+            <div className="grid grid-cols-1 gap-6 w-full">
+              <Link
+                data-aos="fade-left"
+                to="/diets/ketogenic-diet"
+                className="p-6 rounded-xl shadow hover:scale-[1.02] transition border-2 border-emerald-200"
+              >
+                <div className="flex gap-5">
+                  <img
+                    className="max-w-[100px] rounded-2xl"
+                    src={keto}
+                    alt=""
+                  />
+                  <div>
+                    <h3 className="text-xl text-white font-semibold mb-2">
+                      Ketogenic
+                    </h3>
+                    <p className="text-white">
+                      Low-carb, high-fat fuel. Great with fasting for energy +
+                      focus.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                data-aos="fade-left"
+                to="/diets/mediterranean-diet"
+                className="p-6 rounded-xl shadow hover:scale-[1.02] transition border-2 border-emerald-200"
+              >
+                <div className="flex gap-5">
+                  <img className="max-w-[100px]" src={medi} alt="" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-white">
+                      Mediterranean
+                    </h3>
+                    <p className="text-white">
+                      Olive oil, fish, greens — simple and sustainable.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                data-aos="fade-left"
+                to="/diets/paleo-diet"
+                className="p-6 rounded-xl shadow hover:scale-[1.02] transition border-2 border-emerald-200"
+              >
+                <div className="flex gap-5">
+                  <img className="max-w-[100px]" src={paleo} alt="" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-white">
+                      Paleo
+                    </h3>
+                    <p className="text-white">
+                      No grains, no gimmicks. Eat like a human was designed to.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                data-aos="fade-left"
+                to="/diets/vegan-diet"
+                className="p-6 rounded-xl shadow hover:scale-[1.02] transition border-2 border-emerald-200"
+              >
+                <div className="flex gap-5">
+                  <img className="max-w-[100px]" src={vegan} alt="" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-white">
+                      Vegan
+                    </h3>
+                    <p className="text-white">
+                      Plant-based without losing performance or nutrients.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                to="/diets/intermittent-fasting"
+                className="underline col-span-full text-center md:text-white"
+              >
+                Learn About Intermittent Fasting →
+              </Link>
+              <Link
+                to="/diets/compare"
+                className="underline col-span-full text-center md:text-white"
+              >
+                Compare All Diets →
+              </Link>
             </div>
-          </Link>
-          <Link
-            to="/diets/mediterranean-diet"
-            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
-          >
-            <div className="flex gap-5">
-              <img className="max-w-[100px]" src={medi} alt="" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Mediterranean</h3>
-                <p>Olive oil, fish, greens — simple and sustainable.</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/diets/paleo-diet"
-            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
-          >
-            <div className="flex gap-5">
-              <img className="max-w-[100px]" src={paleo} alt="" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Paleo</h3>
-                <p>No grains, no gimmicks. Eat like a human was designed to.</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/diets/vegan-diet"
-            className="bg-white p-6 rounded-xl shadow hover:scale-[1.02] transition"
-          >
-            <div className="flex gap-5">
-              <img className="max-w-[100px]" src={vegan} alt="" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Vegan</h3>
-                <p>Plant-based without losing performance or nutrients.</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/diets/intermittent-fasting"
-            className="underline col-span-full text-center"
-          >
-            Learn About Intermittent Fasting →
-          </Link>
-          <Link
-            to="/diets/compare"
-            className="underline col-span-full text-center"
-          >
-            Compare All Diets →
-          </Link>
+          </div>
         </div>
       </section>
 

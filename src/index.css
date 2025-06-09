@@ -13,6 +13,9 @@
     background-position: center;
   }
 }
+.opague {
+  background-color: rgba(0, 0, 0, 0.19);
+}
 .fastinghero {
   background-image: url('../src/assets/images/treadmill.webp');
   background-size: cover;
