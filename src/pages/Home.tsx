@@ -59,7 +59,7 @@ export const HomePage: React.FC = () => {
       <WhatIsFasting />
 
       {/* BENEFIT SCROLL SECTION */}
-      <div className="py-40 benefitshero">
+      <div className="py-20 md:py-40 benefitshero">
         <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
           Why People Love It
         </h2>
@@ -209,13 +209,13 @@ export const HomePage: React.FC = () => {
 
               <Link
                 to="/diets/intermittent-fasting"
-                className="underline col-span-full text-center md:text-white"
+                className="underline col-span-full text-center text-white"
               >
                 Learn About Intermittent Fasting →
               </Link>
               <Link
                 to="/diets/compare"
-                className="underline col-span-full text-center md:text-white"
+                className="underline col-span-full text-center text-white"
               >
                 Compare All Diets →
               </Link>
