@@ -69,7 +69,7 @@ export const HomePage: React.FC = () => {
       {/* MOOD SECTION */}
       <section
         ref={moodRef}
-        className={`bg-white py-5 px-6 transition duration-1000 ease-in-out ${
+        className={`bg-slate-200 py-5 px-6 transition duration-1000 ease-in-out ${
           moodVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
@@ -121,7 +121,7 @@ export const HomePage: React.FC = () => {
               alt="Nutrition facts"
             />
 
-            <p className="text-lg max-w-xl mx-auto md:mx-0 mb-12 md:text-white">
+            <p className="text-lg max-w-xl mx-auto md:mx-0 mb-12 text-gray-300">
               The best diet is the one that works for you — long term. These
               styles are flexible, sustainable, and fasting-friendly.
             </p>
@@ -145,7 +145,7 @@ export const HomePage: React.FC = () => {
                     <h3 className="text-xl text-white font-semibold mb-2">
                       Ketogenic
                     </h3>
-                    <p className="text-white">
+                    <p className="text-gray-300">
                       Low-carb, high-fat fuel. Great with fasting for energy +
                       focus.
                     </p>
@@ -164,7 +164,7 @@ export const HomePage: React.FC = () => {
                     <h3 className="text-xl font-semibold mb-2 text-white">
                       Mediterranean
                     </h3>
-                    <p className="text-white">
+                    <p className="text-gray-300">
                       Olive oil, fish, greens — simple and sustainable.
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export const HomePage: React.FC = () => {
                     <h3 className="text-xl font-semibold mb-2 text-white">
                       Paleo
                     </h3>
-                    <p className="text-white">
+                    <p className="text-gray-300">
                       No grains, no gimmicks. Eat like a human was designed to.
                     </p>
                   </div>
@@ -200,7 +200,7 @@ export const HomePage: React.FC = () => {
                     <h3 className="text-xl font-semibold mb-2 text-white">
                       Vegan
                     </h3>
-                    <p className="text-white">
+                    <p className="text-gray-300">
                       Plant-based without losing performance or nutrients.
                     </p>
                   </div>
