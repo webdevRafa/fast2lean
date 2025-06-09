@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
-import clock from "../assets/images/clock.jpg";
 import silhouette from "../assets/images/silhouette.webp";
 
 import brainGut from "../assets/images/brain-gut.png";
