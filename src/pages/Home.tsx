@@ -24,7 +24,7 @@ export const HomePage: React.FC = () => {
   const { ref: articlesRef, visible: articlesVisible } = useInViewAnimation();
 
   return (
-    <main className="font-sans text-gray-900">
+    <main className="font-sans text-gray-900 overflow-hidden">
       {/* HERO */}
       <section className="bg-white py-24 px-6 hero relative z-30">
         <div
