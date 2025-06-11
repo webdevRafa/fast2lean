@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, limit } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig"; // adjust the path if needed
 
 interface Article {
@@ -18,7 +18,8 @@ const ArticlesSection = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const snapshot = await getDocs(collection(db, "articles"));
+        const q = query(collection(db, "articles"), limit(10));
+        const snapshot = await getDocs(q);
         const articleList = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -47,7 +48,7 @@ const ArticlesSection = () => {
 
   return (
     <section
-      className={`py-5 md:py-10 px-6 hero transition duration-1000 ease-in-out`}
+      className={`py-5 md:py-10 px-6 bg-white transition duration-1000 ease-in-out`}
     >
       <h2 className="text-4xl font-bold text-center mb-10">
         Articles worth reading
@@ -72,7 +73,7 @@ const ArticlesSection = () => {
       {/* Horizontal scrollable list */}
       <div
         ref={sliderRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 max-w-6xl mx-auto"
+        className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-2 max-w-6xl mx-auto"
       >
         {articles.map((article) => (
           <Link
