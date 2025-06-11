@@ -48,6 +48,7 @@ const ArticlesSection = () => {
 
   return (
     <section
+      data-aos="fade-up"
       className={`py-5 md:py-10 px-6 bg-white transition duration-1000 ease-in-out`}
     >
       <h2 className="text-4xl font-bold text-center mb-10">
