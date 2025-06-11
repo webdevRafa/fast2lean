@@ -26,7 +26,7 @@ export const HomePage: React.FC = () => {
   return (
     <main className="font-sans text-gray-900 overflow-hidden">
       {/* HERO */}
-      <section className="bg-white py-24 px-6 hero relative z-30">
+      <section className="bg-white py-5 md:py-24 px-6 hero relative z-30">
         <div
           ref={heroRef}
           className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 transition duration-1000 ease-in-out relative z-30${
@@ -37,11 +37,11 @@ export const HomePage: React.FC = () => {
         >
           <div className="md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              What You Eat Matters. But When You Eat? That’s the Game-Changer.
+              What you eat matters, but when you eat is the game-changer.
             </h1>
             <p className="text-lg mb-6">
-              Learn about Intermittent Fasting and what it could do for you —
-              mentally, physically, and emotionally.
+              An evolving guide to intermittent fasting, nutrition insights, and
+              the diet styles that actually support your health.
             </p>
           </div>
           <div className="md:w-1/2 justify-center hidden md:flex">
@@ -60,9 +60,18 @@ export const HomePage: React.FC = () => {
 
       {/* BENEFIT SCROLL SECTION */}
       <div className="py-20 md:py-40 benefitshero">
-        <h2 className="text-2xl md:text-3xl text-center mb-6 text-white font-thin">
-          Why People Love It
-        </h2>
+        <div
+          data-aos="fade-up"
+          className="max-w-[800px] mx-auto opague py-3 mb-6 rounded-xl border-x-4 border-green-100"
+        >
+          <h2 className="text-2xl md:text-4xl lg:text-5xl text-center text-green-200 lowercase ">
+            GET IN MOVEMENT
+          </h2>
+          <p className="text-white text-center md:text-left md:ml-70 lg:ml-45">
+            some of the reasons people love the lifestyle
+          </p>
+        </div>
+
         <BenefitSlider />
       </div>
 

@@ -14,7 +14,7 @@
   }
 }
 .opague {
-  background-color: rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.70);
 }
 .fastinghero {
   background-image: url('../src/assets/images/treadmill.webp');
@@ -36,7 +36,7 @@
   background-position: center;
 }
 .dark {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(31, 31, 31);
 }
 body {
   background-color: #F3F6F4;
@@ -44,7 +44,7 @@ body {
 .bg-body, .benefit {
   background-color: #F3F6F4;
 }
-h1, h2, p {
+h1 {
   font-family: 'Inter', sans-serif;
 }
 

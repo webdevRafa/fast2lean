@@ -45,18 +45,18 @@ const FastingBenefitsSection: React.FC = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20 fastinghero ">
       <div className="max-w-6xl mx-auto text-center">
         <h2
-          className="text-white text-3xl md:text-4xl font-bold mb-6"
+          className="text-white text-3xl md:text-4xl font-bold mb-2"
           data-aos="fade-up"
         >
-          feel better. live better.
+          Feel better. Think clearer. Move stronger.
         </h2>
         <p
-          className="text-lg text-white mb-12"
+          className="text-lg text-gray-200 mb-12"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          with the benefits that fasting brings, you can unlock a better version
-          of yourself
+          Changing when you eat might be the simplest step toward feeling better
+          in more ways than you’d expect.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (

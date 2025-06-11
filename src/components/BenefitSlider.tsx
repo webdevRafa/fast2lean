@@ -20,7 +20,7 @@ const benefits = [
 
 export const BenefitSlider: React.FC = () => {
   return (
-    <div className="relative w-full z-40 overflow-hidden">
+    <div data-aos="fade-up" className="relative w-full z-40 overflow-hidden">
       <style>
         {`
           @keyframes scroll {
@@ -40,7 +40,7 @@ export const BenefitSlider: React.FC = () => {
         {[...benefits, ...benefits].map((text, i) => (
           <div
             key={i}
-            className="cursor-pointer text-white min-w-[280px] md:min-w-[300px] mx-2 p-4 rounded-xl dark shadow-md text-center border-green-400 border-2 "
+            className="cursor-pointer text-white min-w-[280px] md:min-w-[300px] mx-2 p-4 dark shadow-md text-center"
           >
             {text}
           </div>
