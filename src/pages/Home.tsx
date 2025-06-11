@@ -15,13 +15,13 @@ import nutrition from "../assets/images/nutrition-facts.webp";
 import { WhatIsFasting } from "../components/WhatIsFasting";
 import { BenefitSlider } from "../components/BenefitSlider";
 import FastingBenefitsSection from "../components/FastingBenefitsSection";
+import ArticlesSection from "../components/ArticlesSection";
 
 export const HomePage: React.FC = () => {
   const { ref: heroRef, visible: heroVisible } = useInViewAnimation();
   const { ref: moodRef, visible: moodVisible } = useInViewAnimation();
   const { ref: dietsRef, visible: dietsVisible } = useInViewAnimation();
   const { ref: toolsRef, visible: toolsVisible } = useInViewAnimation();
-  const { ref: articlesRef, visible: articlesVisible } = useInViewAnimation();
 
   return (
     <main className="font-sans text-gray-900 overflow-hidden">
@@ -62,15 +62,15 @@ export const HomePage: React.FC = () => {
       <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40">
         <div
           data-aos="fade-up"
-          className="max-w-[800px] mx-auto opague py-3 mb-6"
+          className="max-w-[800px] mx-auto opague p-3 mb-6"
         >
-          <h2 className="text-2xl md:text-4xl  text-center text-green-200 massilia lowercase">
+          <h2 className="text-3xl md:text-4xl  text-left md:text-center  text-green-200 massilia uppercase">
             Join the movement
           </h2>
-          <p className="text-white text-center">
+          <p className="text-gray-100 text-left md:text-center text-md">
             <span className="text-green-200 font-bold">IF</span> can help in
             many ways, but this is just the start. Expand your knowledge and
-            become the best version of yourself.
+            become the best you.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export const HomePage: React.FC = () => {
       {/* MOOD SECTION */}
       <section
         ref={moodRef}
-        className={`bg-slate-200 py-5 px-6 transition duration-1000 ease-in-out ${
+        className={`bg-white py-5 px-6 transition duration-1000 ease-in-out ${
           moodVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
@@ -89,7 +89,7 @@ export const HomePage: React.FC = () => {
             <img
               src={brainGut}
               alt="Mood & hormones"
-              className="rounded-xl shadow-lg md:max-w-[360px] lg:max-w-[400px] md:translate-y-[20%]"
+              className="rounded-xl shadow-md md:max-w-[360px] lg:max-w-[400px] md:translate-y-[20%]"
             />
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
@@ -121,21 +121,20 @@ export const HomePage: React.FC = () => {
         <div className="flex flex-col md:flex-row items-start mx-auto w-full max-w-[1600px] gap-3 px-4">
           {/* Left Side: Heading + Image + Paragraph */}
           <div className="md:w-1/2 w-full text-center md:text-left">
-            <h2 className="text-2xl md:text-4xl font-bold mb-5 py-4 text-white">
-              Discover what's best for you
+            <h2 className="text-2xl md:text-4xl font-bold mb-1  text-white">
+              Level up your nutrition
             </h2>
-
+            <p className="text-lg max-w-xl mx-auto md:mx-0 mb-12 text-gray-300">
+              Discover flexible eating styles — from high-fat fuel to
+              plant-powered simplicity — and choose the one that works best for
+              your goals and your lifestyle.
+            </p>
             <img
               data-aos="fade-up"
               className="mx-auto md:mx-0 w-full md:max-w-[700px] mb-10"
               src={nutrition}
               alt="Nutrition facts"
             />
-
-            <p className="text-lg max-w-xl mx-auto md:mx-0 mb-12 text-gray-300">
-              The best diet is the one that works for you — long term. These
-              styles are flexible, sustainable, and fasting-friendly.
-            </p>
           </div>
 
           {/* Right Side: Diet Cards */}
@@ -194,7 +193,8 @@ export const HomePage: React.FC = () => {
                       Paleo
                     </h3>
                     <p className="text-gray-300">
-                      No grains, no gimmicks. Eat like a human was designed to.
+                      Real food. No grains, no processed extras — just how we
+                      were built to eat.
                     </p>
                   </div>
                 </div>
@@ -234,59 +234,8 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
+      <ArticlesSection />
       {/* ARTICLES */}
-      <section
-        ref={articlesRef}
-        className={`py-24 px-6 hero transition duration-1000 ease-in-out ${
-          articlesVisible ? "opacity-100" : "opacity-0 translate-y-6"
-        }`}
-      >
-        <h2 className="text-4xl font-bold text-center mb-10">
-          Articles worth reading
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <Link
-            to="/articles/10-benefits-of-fasting"
-            className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              10 Real Benefits of Fasting
-            </h3>
-            <p>
-              From better sleep to sharper thinking — it’s more than weight
-              loss.
-            </p>
-          </Link>
-          <Link
-            to="/articles/coding-with-fasting"
-            className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              How IF helped me code better
-            </h3>
-            <p>
-              More focus, less fog. Fasting helped me get into flow — and stay
-              there.
-            </p>
-          </Link>
-          <Link
-            to="/articles/bdnf-and-depression"
-            className="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              Fasting & Depression: A Brain Chemistry Shift
-            </h3>
-            <p>BDNF, neurogenesis, and why your mood might improve.</p>
-          </Link>
-        </div>
-        <Link
-          to="/articles"
-          className="block mt-6 text-center text-blue-700 underline font-medium"
-        >
-          Browse All Articles →
-        </Link>
-      </section>
 
       {/* TOOLS */}
       <section

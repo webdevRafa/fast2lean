@@ -50,8 +50,9 @@ body {
 .bg-body, .benefit {
   background-color: #F3F6F4;
 }
-h1 {
+h1, h2, h3, p {
   font-family: 'Inter', sans-serif;
+  font-family: "massilia", sans-serif;
 }
 
 .cta {
