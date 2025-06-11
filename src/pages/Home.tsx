@@ -36,7 +36,7 @@ export const HomePage: React.FC = () => {
           }`}
         >
           <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 massilia">
               What you eat matters, but when you eat is the game-changer.
             </h1>
             <p className="text-lg mb-6">
@@ -59,16 +59,18 @@ export const HomePage: React.FC = () => {
       <WhatIsFasting />
 
       {/* BENEFIT SCROLL SECTION */}
-      <div className="py-20 md:py-40 benefitshero">
+      <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40">
         <div
           data-aos="fade-up"
-          className="max-w-[800px] mx-auto opague py-3 mb-6 rounded-xl border-x-4 border-green-100"
+          className="max-w-[800px] mx-auto opague py-3 mb-6"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl text-center text-green-200 lowercase ">
-            GET IN MOVEMENT
+          <h2 className="text-2xl md:text-4xl  text-center text-green-200 massilia lowercase">
+            Join the movement
           </h2>
-          <p className="text-white text-center md:text-left md:ml-70 lg:ml-45">
-            some of the reasons people love the lifestyle
+          <p className="text-white text-center">
+            <span className="text-green-200 font-bold">IF</span> can help in
+            many ways, but this is just the start. Expand your knowledge and
+            become the best version of yourself.
           </p>
         </div>
 

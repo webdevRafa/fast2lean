@@ -40,7 +40,7 @@ export const BenefitSlider: React.FC = () => {
         {[...benefits, ...benefits].map((text, i) => (
           <div
             key={i}
-            className="cursor-pointer text-white min-w-[280px] md:min-w-[300px] mx-2 p-4 dark shadow-md text-center"
+            className="cursor-pointer text-green-100 min-w-[280px] md:min-w-[300px] mx-2 p-4 text-center"
           >
             {text}
           </div>

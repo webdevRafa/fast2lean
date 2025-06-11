@@ -35,8 +35,14 @@
   background-size: cover;
   background-position: center;
 }
-.dark {
-  background-color: rgb(31, 31, 31);
+
+.massilia {
+  font-family: "massilia", sans-serif;
+}
+.darkgradient {
+  background: linear-gradient(to bottom, #155018 0%, #1d1d1d 16%, #1d1d1d 100%);
+
+
 }
 body {
   background-color: #F3F6F4;

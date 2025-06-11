@@ -1,23 +1,23 @@
 import React from "react";
-import fastingImg from "../assets/images/fasting-window.webp"; // optional image
+import fastingImg from "../assets/images/if-ill.webp"; // optional image
 
 export const WhatIsFasting: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
+    <section className="bg-white  py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Image or Illustration */}
         <div data-aos="fade-right">
           <img
             src={fastingImg}
             alt="Fasting Window Illustration"
-            className="shadow-lg w-full border-r-4 border-slate-950"
+            className="w-full border-r-4 rounded-xl border-slate-600"
           />
         </div>
 
         {/* Content */}
         <div data-aos="fade-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 bg-gray-50 p-2">
-            What Is Intermittent Fasting?
+          <h2 className="text-2xl md:text-3xl font-bold  mb-6 p-2 massilia">
+            Intermittent Fasting Explained
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             Intermittent Fasting (IF) isn’t about <strong>what</strong> you eat

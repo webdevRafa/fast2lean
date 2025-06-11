@@ -44,20 +44,23 @@ const FastingBenefitsSection: React.FC = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20 fastinghero ">
       <div className="max-w-6xl mx-auto text-center">
-        <h2
-          className="text-white text-3xl md:text-4xl font-bold mb-2"
-          data-aos="fade-up"
-        >
-          Feel better. Think clearer. Move stronger.
-        </h2>
-        <p
-          className="text-lg text-gray-200 mb-12"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Changing when you eat might be the simplest step toward feeling better
-          in more ways than you’d expect.
-        </p>
+        <div className="opague">
+          <h2
+            className="text-white text-3xl md:text-4xl font-bold mb-2 massilia"
+            data-aos="fade-up"
+          >
+            Feel better. Think clearer. Move stronger.
+          </h2>
+          <p
+            className="text-lg text-gray-200 mb-12"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Changing <span className="text-white font-bold">when</span> you eat
+            might be the simplest step toward feeling better in more ways than
+            you’d expect.
+          </p>
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (
             <div
@@ -69,18 +72,18 @@ const FastingBenefitsSection: React.FC = () => {
               <div className="flex items-center justify-center w-12 h-12 mb-4 mx-auto rounded-full bg-green-100">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+              <h3 className="text-lg mb-2 massilia">{benefit.title}</h3>
               <p className="text-sm text-gray-600">{benefit.desc}</p>
             </div>
           ))}
         </div>
         <p
-          className="mt-12 text-md text-white"
+          className="mt-12 text-md md:text-lg text-white opague massilia"
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          Intermittent fasting isn’t a trend — it’s a proven way to feel better,
-          think sharper, and show up stronger in your life.
+          Fasting is powerful — but it’s just the start. Keep learning, stay
+          consistent, and let your health evolve with you.
         </p>
       </div>
     </section>
