@@ -13,18 +13,22 @@ interface ProductInput {
 }
 
 export const addProduct = functions.https.onCall(async (data, context) => {
-  // ✅ Confirm data was received and is an object
-  if (!data || typeof data !== "object") {
-    console.error("❌ No data received.");
-    throw new functions.https.HttpsError("invalid-argument", "No data received.");
-  }
+  // ✅ The actual product is inside data.data due to { data: product } shape
+  const raw = (data as any).data;
 
-  const product = data as unknown as ProductInput;
+  const product: ProductInput = {
+    name: String(raw.name),
+    price: parseFloat(raw.price),
+    tags: Array.isArray(raw.tags) ? raw.tags : String(raw.tags).split(',').map(t => t.trim()),
+    link: String(raw.link),
+    image: raw.image ? String(raw.image) : undefined
+  };
 
 
-  console.log("📥 Raw product input:", product);
 
-  // ✅ Safe field validation
+  console.log("✅ Parsed product:", product);
+
+  // ✅ Validation (adjust to ensure all required fields are present)
   if (
     typeof product.name !== "string" || product.name.trim() === "" ||
     typeof product.price !== "number" || isNaN(product.price) ||
@@ -43,11 +47,9 @@ export const addProduct = functions.https.onCall(async (data, context) => {
     price: product.price,
     tags: product.tags.map(tag => tag.trim()),
     link: product.link.trim(),
-    image: product.image || null,
+    image: product.image?.trim() || null,
     createdAt: admin.firestore.FieldValue.serverTimestamp(),
   };
-
-  console.log("📤 productData to save:", productData);
 
   try {
     const newProductRef = await db.collection("products").add(productData);

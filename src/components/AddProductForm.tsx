@@ -11,10 +11,15 @@ const AddProductForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const parsedPrice = parseFloat(price);
 
+    if (isNaN(parsedPrice)) {
+      alert("❌ Please enter a valid number for price.");
+      return;
+    }
     const product = {
       name,
-      price: parseFloat(price),
+      price: parsedPrice,
       tags: tags
         .split(",")
         .map((t) => t.trim())
