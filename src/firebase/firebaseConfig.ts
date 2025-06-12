@@ -1,6 +1,8 @@
 // src/firebase/firebaseConfig.ts
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import { getFunctions } from "firebase/functions";
+import { getAuth } from "firebase/auth";
 
 // Your Firebase config object (replace these with your real values)
 const firebaseConfig = {
@@ -14,6 +16,11 @@ const firebaseConfig = {
 
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
+// Initialize functions
+const functions = getFunctions(app);
 
+// Auth
+const auth = getAuth(app);
+export { functions, auth };
 // Initialize Firestore and export
 export const db = getFirestore(app);

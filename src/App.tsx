@@ -21,6 +21,11 @@ import { MediterraneanDietPage } from "./pages/diets/MediterraneanDietPage";
 import { PaleoDietPage } from "./pages/diets/PaleoDietPage";
 import { VeganDietPage } from "./pages/diets/VeganDietPage";
 import { CompareDietsPage } from "./pages/diets/CompareDietsPage";
+
+// add
+import AddProductFormWrapper from "./components/AddProductFormWrapper";
+import Login from "./pages/Login";
+
 // @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,6 +40,8 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/dev-add-product" element={<AddProductFormWrapper />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/articles" element={<Articles />} />
