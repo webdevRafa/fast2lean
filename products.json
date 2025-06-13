@@ -1,0 +1,24 @@
+[
+{
+    "name": "Vegan Protein Shake",
+    "description": "Plant-based protein blend to support lean muscle, digestion, and recovery.",
+    "tags": [
+      "protein",
+      "vegan",
+      "muscle",
+      "recovery",
+      "plant-based"
+    ]
+  },
+  {
+    "name": "Whey Protein Isolate",
+    "description": "Fast-digesting protein for muscle growth and post-workout recovery.",
+    "tags": [
+      "protein",
+      "muscle",
+      "recovery",
+      "workout",
+      "fitness"
+    ]
+  }
+]

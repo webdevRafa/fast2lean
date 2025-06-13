@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig"; // your db setup
 import { Timestamp } from "firebase/firestore";
 import { RelatedProducts } from "../components/RelatedProducts";
+import { RelatedArticles } from "../components/RelatedArticles";
 
 interface Article {
   title: string;
@@ -68,6 +69,7 @@ const ArticlePage: React.FC = () => {
         </p>
       </main>
       <RelatedProducts productTags={article.productTags ?? []} />
+      <RelatedArticles currentSlug={slug!} tags={article.tags} />
     </>
   );
 };
