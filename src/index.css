@@ -38,9 +38,7 @@
 .newred {
   color: #c1272d;
 }
-.massilia {
-  font-family: "massilia", sans-serif;
-}
+
 .darkgradient {
   background: linear-gradient(to bottom, #155018 0%, #1d1d1d 16%, #1d1d1d 100%);
 
@@ -54,7 +52,7 @@ body {
 }
 h1, h2, h3, p {
   font-family: 'Inter', sans-serif;
-  font-family: "massilia", sans-serif;
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .cta {

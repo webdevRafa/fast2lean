@@ -3,6 +3,7 @@ import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import silhouette from "../assets/images/silhouette.webp";
 
 import brainGut from "../assets/images/brain-gut.png";
+import logo from "../assets/logos/f2l-official-black.svg";
 
 // images
 import keto from "../assets/svgs/keto.svg";
@@ -36,6 +37,7 @@ export const HomePage: React.FC = () => {
           }`}
         >
           <div className="md:w-1/2 text-center md:text-left">
+            <img className="my-5  max-w-[300px]" src={logo} alt="" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6 massilia">
               What you eat matters, but when you eat is the game-changer.
             </h1>
