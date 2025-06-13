@@ -113,7 +113,7 @@ export const HomePage: React.FC = () => {
       {/* DIET STACK */}
       <section
         ref={dietsRef}
-        className={`bg-gradient-to-b from-gray-800 to-black py-24 transition duration-1000 ease-in-out ${
+        className={`bg-gray-900 py-24 transition duration-1000 ease-in-out ${
           dietsVisible ? "opacity-100" : "opacity-0 translate-y-6"
         }`}
       >

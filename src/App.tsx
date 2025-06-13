@@ -6,6 +6,8 @@ import ArticlePage from "./pages/ArticlePage";
 import Articles from "./pages/Articles";
 import ScrollToTop from "./components/ScrollToTop";
 import { Tools } from "./pages/Tools";
+import { Footer } from "./components/Footer";
+
 // tool pages
 import { FastingSchedule } from "./pages/tools/FastingSchedule";
 import { MacroCalculator } from "./pages/tools/MacroCalculator";
@@ -72,6 +74,7 @@ function App() {
             element={<GroceryListGenerator />}
           />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

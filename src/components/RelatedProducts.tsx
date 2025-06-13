@@ -36,7 +36,7 @@ export const RelatedProducts: React.FC<{ productTags: string[] }> = ({
   if (!products.length) return null;
 
   return (
-    <section className="mt-16 mx-auto max-w-[1400px]">
+    <section className="mt-16 mx-auto max-w-[1400px] md:py-10">
       <h2 data-aos="fade-up" className="text-2xl font-bold mb-6 text-center">
         Products You Might Like
       </h2>

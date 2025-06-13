@@ -81,33 +81,38 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({
   if (!related.length) return null;
 
   return (
-    <section className="mt-16 px-4 max-w-[1400px] mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Related articles</h2>
-      <div className="grid gap-6 md:grid-cols-3">
-        {related.map((art) => (
-          <Link
-            key={art.id}
-            to={`/articles/${art.id}`}
-            className="block bg-white rounded-lg shadow-sm hover:shadow-md transition"
-          >
-            {art.bannerImageUrl && (
-              <img
-                src={art.bannerImageUrl}
-                alt={art.title}
-                className="w-full h-40 object-cover rounded-t-lg"
-              />
-            )}
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-1 line-clamp-2">
-                {art.title}
-              </h3>
-              <p className="text-sm text-gray-600 line-clamp-3">
-                {art.excerpt}
-              </p>
-            </div>
-          </Link>
-        ))}
+    <>
+      <div className="w-full py-10">
+        <section className="mt-16 px-4 max-w-[1400px]  mx-auto">
+          <h2 className="text-2xl font-bold mb-6">Related articles</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {related.map((art) => (
+              <Link
+                data-aos="fade-up"
+                key={art.id}
+                to={`/articles/${art.id}`}
+                className="block bg-white rounded-lg shadow-sm hover:shadow-md transition"
+              >
+                {art.bannerImageUrl && (
+                  <img
+                    src={art.bannerImageUrl}
+                    alt={art.title}
+                    className="w-full h-40 object-cover rounded-t-lg"
+                  />
+                )}
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg mb-1 line-clamp-2">
+                    {art.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-3">
+                    {art.excerpt}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
-    </section>
+    </>
   );
 };
