@@ -1,6 +1,9 @@
 // src/components/AddProductForm.tsx
 import React, { useState } from "react";
 import { addProduct } from "../utils/addProduct";
+import { uploadProducts } from "../utils/addProducts";
+import { ViewProducts } from "./ViewProducts";
+import { uploadArticles } from "../utils/addArticles";
 
 const AddProductForm: React.FC = () => {
   const [name, setName] = useState("");
@@ -43,49 +46,27 @@ const AddProductForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 space-y-4">
-      <input
-        type="text"
-        placeholder="Name"
-        className="w-full border p-2"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Price"
-        className="w-full border p-2"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Tags (comma separated)"
-        className="w-full border p-2"
-        value={tags}
-        onChange={(e) => setTags(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Amazon Link"
-        className="w-full border p-2"
-        value={link}
-        onChange={(e) => setLink(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Image URL (optional)"
-        className="w-full border p-2"
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-      />
-      <button
-        type="submit"
-        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-      >
-        Add Product
-      </button>
-    </form>
+    <>
+      <div className="mt-20 mx-auto max-w-[1400px]">
+        <button
+          onClick={uploadProducts}
+          className="cursor-pointer mx-auto block bg-green-800 hover:bg-green-600 transition duration-300 ease-in-out p-4 text-white"
+        >
+          ADD PRODUCTS.JSON
+        </button>
+      </div>
+      <div className="mt-20 mx-auto max-w-[1400px]">
+        <button
+          onClick={uploadArticles}
+          className="cursor-pointer mx-auto block bg-green-800 hover:bg-green-600 transition duration-300 ease-in-out p-4 text-white"
+        >
+          ADD ARTICLES.JSON
+        </button>
+      </div>
+      <div>
+        <ViewProducts />
+      </div>
+    </>
   );
 };
 

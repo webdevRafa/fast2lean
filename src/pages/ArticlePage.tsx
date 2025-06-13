@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig"; // your db setup
 import { Timestamp } from "firebase/firestore";
+import { RelatedProducts } from "../components/RelatedProducts";
 
 interface Article {
   title: string;
@@ -10,7 +11,9 @@ interface Article {
   author: string;
   createdAt: Timestamp;
   bannerImageUrl?: string;
+  slug?: string;
   tags: string[];
+  productTags?: string[]; // ✅ add this line
   content: string;
 }
 
@@ -38,27 +41,34 @@ const ArticlePage: React.FC = () => {
   if (!article) return <p className="text-center mt-20">Loading article...</p>;
 
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12 text-gray-900">
-      {article.bannerImageUrl && (
-        <img
-          src={article.bannerImageUrl}
-          alt={article.title}
-          className="rounded-lg mb-6 w-full max-h-[400px] object-cover"
-        />
-      )}
-      <h1 className="text-3xl md:text-5xl font-bold mb-4">{article.title}</h1>
-      <p className="text-gray-600 text-sm mb-2">
-        By {article.author} • {article.createdAt.toDate().toLocaleDateString()}
-      </p>
-      <p className="text-lg text-gray-700 mb-10 italic">{article.excerpt}</p>
+    <>
+      <main
+        data-aos="fade-up"
+        className="max-w-[1400px]  mx-auto px-4 md:px-20 py-12 text-gray-900 bg-white shadow-sm mt-10"
+      >
+        {article.bannerImageUrl && (
+          <img
+            src={article.bannerImageUrl}
+            alt={article.title}
+            className="rounded-lg mb-6 w-full max-h-[400px] object-cover"
+          />
+        )}
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">{article.title}</h1>
+        <p className="text-gray-600 text-sm mb-2">
+          By {article.author} •{" "}
+          {article.createdAt.toDate().toLocaleDateString()}
+        </p>
+        <p className="text-lg text-gray-700 mb-10 italic">{article.excerpt}</p>
 
-      <p className="text-gray-800 leading-relaxed whitespace-pre-line">
-        <div
-          className="text-gray-800 leading-relaxed whitespace-pre-line"
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        ></div>
-      </p>
-    </main>
+        <p className="text-gray-800 leading-relaxed whitespace-pre-line">
+          <div
+            className=" text-gray-800 leading-relaxed whitespace-pre-line"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          ></div>
+        </p>
+      </main>
+      <RelatedProducts productTags={article.productTags ?? []} />
+    </>
   );
 };
 

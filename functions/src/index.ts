@@ -14,16 +14,7 @@ interface ProductInput {
 
 export const addProduct = functions.https.onCall(async (data, context) => {
   // ✅ The actual product is inside data.data due to { data: product } shape
-  const raw = (data as any).data;
-
-  const product: ProductInput = {
-    name: String(raw.name),
-    price: parseFloat(raw.price),
-    tags: Array.isArray(raw.tags) ? raw.tags : String(raw.tags).split(',').map(t => t.trim()),
-    link: String(raw.link),
-    image: raw.image ? String(raw.image) : undefined
-  };
-
+  const product = (data as any).data as ProductInput;
 
 
   console.log("✅ Parsed product:", product);
