@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logos/f2l-orb.svg";
+import logo from "../assets/logos/f2l-official-black.svg";
 import { RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 import { FiChevronDown } from "react-icons/fi";
 
