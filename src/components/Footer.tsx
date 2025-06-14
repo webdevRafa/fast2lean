@@ -11,14 +11,13 @@ export const Footer = () => {
         <div data-aos="fade-up">
           <img className="max-w-[200px] mb-1" src={logo} alt="" />
           <p className="text-sm">
-            Real strategies, no fluff — fasting, nutrition, and tools that
-            actually work.
+            Intermittent Fasting and Smarter Nutrition for a Leaner You.
           </p>
         </div>
 
         {/* Navigation */}
         <div data-aos="fade-up">
-          <h3 className="text-lg font-semibold text-white mb-2">Navigate</h3>
+          <h3 className="text-lg font-semibold text-white! mb-2">Navigate</h3>
           <ul className="text-sm space-y-1">
             <li>
               <Link to="/" className="hover:underline">
@@ -45,7 +44,7 @@ export const Footer = () => {
 
         {/* Social */}
         <div data-aos="fade-up">
-          <h3 className="text-lg font-semibold text-white mb-2">Connect</h3>
+          <h3 className="text-lg font-semibold text-white! mb-2">Connect</h3>
           <div className="flex space-x-4">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <FaInstagram className="hover:text-white text-xl" />
@@ -58,7 +57,7 @@ export const Footer = () => {
 
         {/* Newsletter (Optional/Static for now) */}
         <div data-aos="fade-up">
-          <h3 className="text-lg font-semibold text-white mb-2">
+          <h3 className="text-lg font-semibold text-white! mb-2">
             Stay in the loop
           </h3>
           <p className="text-sm mb-2">

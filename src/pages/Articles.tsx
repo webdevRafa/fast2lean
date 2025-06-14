@@ -139,7 +139,7 @@ const Articles: React.FC = () => {
         <div className="text-center mt-12">
           <button
             onClick={() => setVisibleCount((prev) => prev + 6)}
-            className="px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800 transition"
+            className="px-6 py-3 cta-dark text-white rounded-lg hover:bg-green-800 transition"
             data-aos="fade-up"
           >
             Load More
