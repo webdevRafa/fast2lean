@@ -1,4 +1,4 @@
-import fast2lean from "../assets/logos/f2l-orb.svg";
+import fast2lean from "../assets/logos/f2l-official-black.svg";
 import { Link } from "react-router-dom";
 import mission from "../assets/svgs/mishi.svg";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
@@ -16,9 +16,9 @@ export const About: React.FC = () => {
         className="text-center  h-[230px] flex items-center justify-center"
       >
         <div>
-          <img className="h-[20px] mx-auto mb-0" src={fast2lean} alt="" />
-          <p className="text-xl max-w-2xl mx-auto leading-relaxed opacity-40">
-            Fast forward your health.
+          <img className="mx-auto mb-2 max-w-[300px]" src={fast2lean} alt="" />
+          <p className="text-xl max-w-2xl mx-auto leading-relaxed opacity-80">
+            Intermittent Fasting and Smarter Nutrition for a Leaner You
           </p>
         </div>
       </section>
