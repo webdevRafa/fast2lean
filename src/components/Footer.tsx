@@ -1,6 +1,7 @@
 // components/Footer.tsx
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import logo from "../assets/logos/f2l-official-white.svg";
 
 export const Footer = () => {
   return (
@@ -8,7 +9,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About / Brand */}
         <div data-aos="fade-up">
-          <h2 className="text-xl font-bold text-white mb-2">Fast2Lean</h2>
+          <img className="max-w-[200px] mb-1" src={logo} alt="" />
           <p className="text-sm">
             Real strategies, no fluff — fasting, nutrition, and tools that
             actually work.

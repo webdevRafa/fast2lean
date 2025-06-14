@@ -14,7 +14,7 @@
   }
 }
 .opague {
-  background-color: rgba(0, 0, 0, 0.70);
+  background-color: rgba(0, 0, 0, 0.80);
 }
 .fastinghero {
   background-image: url('../src/assets/images/treadmill.webp');
@@ -44,23 +44,31 @@
 
 
 }
+#white {
+  color: white;
+}
 body {
   background-color: #F3F6F4;
 }
 .bg-body, .benefit {
   background-color: #F3F6F4;
 }
-h1, h2, h3, p {
-  font-family: 'Inter', sans-serif;
+h1, h2, h3  {
   font-family: "neue-haas-grotesk-display", sans-serif;
+  color: #1a1a1a;
 }
-
+p {
+  font-family: 'Poppins', sans-serif;
+}
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
 .cta {
   background-color: #00C896;
   /* background-color: #ffa726; */
 }
 .cta-dark {
-  background-color: #225d25;
+  background-color: #c1272d;
 }
 .border-green {
   border: 2px solid #2E7D32;
@@ -71,5 +79,5 @@ h1, h2, h3, p {
 }
 
 strong {
-  color: #235d26;
+  color: #c1272d;
 }

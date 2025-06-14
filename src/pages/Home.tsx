@@ -38,12 +38,12 @@ export const HomePage: React.FC = () => {
         >
           <div className="md:w-1/2 text-center md:text-left">
             <img className="my-5  max-w-[300px]" src={logo} alt="" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 massilia">
-              What you eat matters, but when you eat is the game-changer.
+            <h1 className="text-lg md:text-2xl  mb-6 text-left poppins">
+              Intermittent Fasting and Smarter Nutrition for a Leaner You
             </h1>
-            <p className="text-lg mb-6">
-              An evolving guide to intermittent fasting, nutrition insights, and
-              the diet styles that actually support your health.
+            <p className=" mb-6">
+              Explore tools, products, and simple guidance to help you fast with
+              purpose — and fuel your day the right way.
             </p>
           </div>
           <div className="md:w-1/2 justify-center hidden md:flex">
@@ -66,13 +66,12 @@ export const HomePage: React.FC = () => {
           data-aos="fade-up"
           className="max-w-[800px] mx-auto opague p-3 mb-6"
         >
-          <h2 className="text-3xl md:text-4xl  text-left md:text-center  text-green-200 massilia uppercase">
+          <h2 className="text-3xl md:text-4xl  text-left md:px-2 newred poppins">
             Join the movement
           </h2>
           <p className="text-gray-100 text-left md:text-center text-md">
-            <span className="text-green-200 font-bold">IF</span> can help in
-            many ways, but this is just the start. Expand your knowledge and
-            become the best you.
+            <span className="newred ">IF</span> can help in many ways, but this
+            is just the start. Expand your knowledge and become the best you.
           </p>
         </div>
 

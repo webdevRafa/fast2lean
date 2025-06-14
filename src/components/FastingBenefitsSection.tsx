@@ -46,7 +46,7 @@ const FastingBenefitsSection: React.FC = () => {
       <div className="max-w-6xl mx-auto text-center">
         <div className="opague">
           <h2
-            className="text-white text-3xl md:text-4xl font-bold mb-2 massilia"
+            className="text-white! text-3xl md:text-4xl font-bold mb-2 massilia"
             data-aos="fade-up"
           >
             Feel better. Think clearer. Move stronger.

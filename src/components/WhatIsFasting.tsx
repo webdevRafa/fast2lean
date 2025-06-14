@@ -39,7 +39,7 @@ export const WhatIsFasting: React.FC = () => {
             <strong>It’s structure — not restriction.</strong>
           </p>
           <Link to="articles/10-benefits-of-fasting">
-            <button className="cursor-pointer bg-gray-900 mt-5 max-w-[200px] text-white py-2">
+            <button className="cursor-pointer bg-gray-900 mt-5 p-2 text-white">
               <p>Learn 10 benefits of Intermittent Fasting</p>
             </button>
           </Link>
