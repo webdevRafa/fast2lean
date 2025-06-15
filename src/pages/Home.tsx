@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 
-import brainGut from "../assets/images/brain-gut.png";
-
 // images
 import keto from "../assets/svgs/keto.svg";
 import paleo from "../assets/svgs/paleo.svg";
@@ -12,13 +10,12 @@ import nutrition from "../assets/images/nutrition-facts.webp";
 
 // components
 import { WhatIsFasting } from "../components/WhatIsFasting";
-import { BenefitSlider } from "../components/BenefitSlider";
 import FastingBenefitsSection from "../components/FastingBenefitsSection";
 import ArticlesSection from "../components/ArticlesSection";
 import { HeroComponent } from "../components/HeroComponent";
+import { FastingImpact } from "../components/FastingImpact";
 
 export const HomePage: React.FC = () => {
-  const { ref: moodRef, visible: moodVisible } = useInViewAnimation();
   const { ref: dietsRef, visible: dietsVisible } = useInViewAnimation();
   const { ref: toolsRef, visible: toolsVisible } = useInViewAnimation();
 
@@ -33,56 +30,8 @@ export const HomePage: React.FC = () => {
       <WhatIsFasting />
 
       {/* BENEFIT SCROLL SECTION */}
-      <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40">
-        <div
-          data-aos="fade-up"
-          className="max-w-[800px] mx-auto opague p-3 mb-6"
-        >
-          <h2 className="text-3xl md:text-4xl  text-left md:px-2 newred poppins">
-            Join the movement
-          </h2>
-          <p className="text-gray-100 text-left md:text-center text-md">
-            <span className="newred ">IF</span> can help in many ways, but this
-            is just the start. Expand your knowledge and become the best you.
-          </p>
-        </div>
-
-        <BenefitSlider />
-      </div>
-
-      {/* MOOD SECTION */}
-      <section
-        ref={moodRef}
-        className={`bg-white py-5 px-6 transition duration-1000 ease-in-out ${
-          moodVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto md:flex items-center gap-12">
-          <div className="md:w-1/2">
-            <img
-              src={brainGut}
-              alt="Mood & hormones"
-              className="rounded-xl shadow-md md:max-w-[360px] lg:max-w-[400px] md:translate-y-[20%]"
-            />
-          </div>
-          <div className="md:w-1/2 mt-10 md:mt-0">
-            <h2 className="text-3xl font-bold mb-4">
-              It's more than just physical
-            </h2>
-            <p className="text-lg mb-4">
-              Fasting affects your mind, your energy, your mood — not just your
-              waistline.
-            </p>
-            <Link
-              to="/articles"
-              className="text-blue-700 underline font-medium"
-            >
-              Explore the benefits →
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40"></div>
+      <FastingImpact />
       {/* DIET STACK */}
       <section
         ref={dietsRef}

@@ -60,14 +60,6 @@ const FastingBenefitsSection: React.FC = () => {
             </div>
           ))}
         </div>
-        <p
-          className="mt-12 text-md md:text-lg text-white opague massilia"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          Fasting is powerful — but it’s just the start. Keep learning, stay
-          consistent, and let your health evolve with you.
-        </p>
       </div>
     </section>
   );

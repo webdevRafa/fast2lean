@@ -42,10 +42,12 @@ const tools = [
 
 export const Tools: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-950 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Health Tools</h1>
-        <p className="text-gray-600 mb-10">
+        <h1 className="text-4xl font-bold text-white! mb-1 uppercase">
+          Health Tools
+        </h1>
+        <p className="text-gray-400 mb-10">
           Explore tools to personalize your fasting, keto, and nutrition
           journey.
         </p>
@@ -55,10 +57,10 @@ export const Tools: React.FC = () => {
         {tools.map((tool) => (
           <div
             key={tool.id}
-            className="bg-white shadow-lg rounded-2xl p-6 flex flex-col justify-between transition hover:shadow-xl"
+            className="bg-gray-900 shadow-lg rounded-2xl p-6 flex flex-col justify-between transition hover:shadow-xl"
           >
             <div>
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              <h2 className="text-xl font-semibold text-gray-300! mb-2">
                 {tool.title}
               </h2>
               <p className="text-gray-600 mb-4">{tool.description}</p>

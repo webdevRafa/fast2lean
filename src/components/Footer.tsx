@@ -5,7 +5,7 @@ import logo from "../assets/logos/f2l-official-white.svg";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 px-6 py-12 mt-16">
+    <footer className="bg-gray-900 text-gray-300 px-6 py-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About / Brand */}
         <div data-aos="fade-up">
