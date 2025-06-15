@@ -14,6 +14,7 @@ import FastingBenefitsSection from "../components/FastingBenefitsSection";
 import ArticlesSection from "../components/ArticlesSection";
 import { HeroComponent } from "../components/HeroComponent";
 import { FastingImpact } from "../components/FastingImpact";
+import TestimonialCarousel from "../components/TestimonialsCarousel";
 
 export const HomePage: React.FC = () => {
   const { ref: dietsRef, visible: dietsVisible } = useInViewAnimation();
@@ -32,6 +33,7 @@ export const HomePage: React.FC = () => {
       {/* BENEFIT SCROLL SECTION */}
       <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40"></div>
       <FastingImpact />
+      <TestimonialCarousel />
       {/* DIET STACK */}
       <section
         ref={dietsRef}

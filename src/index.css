@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+/* Make slick dots white */
+.slick-dots li button:before {
+  color: white !important;
+  opacity: 0.4;
+}
 
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: white !important;
+}
 @supports (-webkit-touch-callout: none) {
   .fastinghero {
     background-attachment: scroll !important; /* disable fixed */

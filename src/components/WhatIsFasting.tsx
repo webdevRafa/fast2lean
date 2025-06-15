@@ -1,5 +1,5 @@
 import React from "react";
-import fastingImg from "../assets/images/if-ill.webp"; // optional image
+import fastingImg from "../assets/images/bg-600.png"; // optional image
 import { Link } from "react-router-dom";
 
 export const WhatIsFasting: React.FC = () => {
@@ -39,7 +39,7 @@ export const WhatIsFasting: React.FC = () => {
             <strong>It’s structure — not restriction.</strong>
           </p>
           <Link to="articles/10-benefits-of-fasting">
-            <button className="cursor-pointer bg-gray-900 mt-5 p-2 text-white">
+            <button className="cursor-pointer cta-dark mt-5 p-2 text-white">
               <p>Learn 10 benefits of Intermittent Fasting</p>
             </button>
           </Link>
