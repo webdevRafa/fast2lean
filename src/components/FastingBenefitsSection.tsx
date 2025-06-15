@@ -42,7 +42,7 @@ const benefits = [
 
 const FastingBenefitsSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-10 lg:px-20 fastinghero ">
+    <section className="bg-white py-16 px-6 md:px-10 lg:px-20 fastinghero hidden md:block">
       <div className="max-w-6xl mx-auto text-center">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (

@@ -1,5 +1,6 @@
 // components/TestimonialCarousel.tsx
 import Slider from "react-slick";
+import hero from "../assets/images/treadmill.webp";
 
 const testimonials = [
   {
@@ -38,7 +39,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-24 px-6 ">
+    <section className="py-24 px-6 relative">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-1 text-white!">
           Don’t Take Our Word for It…
@@ -57,6 +58,13 @@ const TestimonialCarousel = () => {
             </div>
           ))}
         </Slider>
+      </div>
+      <div className="absolute z-[-10] w-full h-full top-0 left-0 bg-gray-900">
+        <img
+          className="w-full h-full object-cover opacity-5"
+          src={hero}
+          alt=""
+        />
       </div>
     </section>
   );

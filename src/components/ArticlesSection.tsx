@@ -52,7 +52,7 @@ const ArticlesSection = () => {
       className={`py-5 md:py-10 px-6 bg-white transition duration-1000 ease-in-out`}
     >
       <h2 className="text-4xl font-bold text-center mb-10">
-        Articles worth reading
+        Read. Apply. Feel Better.
       </h2>
 
       {/* Navigation buttons */}

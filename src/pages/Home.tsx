@@ -31,9 +31,14 @@ export const HomePage: React.FC = () => {
       <WhatIsFasting />
 
       {/* BENEFIT SCROLL SECTION */}
-      <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40"></div>
+      <div className="bg-gray-950 hidden md:block">
+        <div className="py-20 md:py-40 benefitshero px-4 md:px-30 lg:px-40 opacity-40"></div>
+      </div>
       <FastingImpact />
       <TestimonialCarousel />
+
+      <ArticlesSection />
+
       {/* DIET STACK */}
       <section
         ref={dietsRef}
@@ -158,9 +163,6 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      <ArticlesSection />
-      {/* ARTICLES */}
-
       {/* TOOLS */}
       <section
         ref={toolsRef}
