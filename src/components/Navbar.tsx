@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logos/f2l-official-black.svg";
+import logo from "../assets/logos/f2l-official-white.svg";
 import { RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 import { FiChevronDown } from "react-icons/fi";
 
@@ -9,8 +9,8 @@ export const Navbar: React.FC = () => {
   const [showDietsDropdown, setShowDietsDropdown] = useState(false);
 
   return (
-    <div className="bg-white w-full py-2 sticky top-0 z-60 shadow-md">
-      <div className="flex justify-between items-center max-w-[1400px] mx-auto px-4">
+    <div className="bg-gray-950 w-full py-2 sticky top-0 z-60 shadow-md">
+      <div className="flex justify-between items-center max-w-[1400px] mx-auto px-4 text-white">
         <Link to="/">
           <img className="h-[15px]" src={logo} alt="Fast2Lean Logo" />
         </Link>
@@ -31,31 +31,31 @@ export const Navbar: React.FC = () => {
               Diets <FiChevronDown className="mt-[1px]" />
             </span>
             <ul
-              className={`absolute bg-white shadow-md py-2 w-48 rounded-md top-full left-0 z-50 transition-opacity duration-200 ${
+              className={`absolute bg-gray-950 shadow-md py-2 w-48 rounded-md top-full left-0 z-50 transition-opacity duration-200 text-white ${
                 showDietsDropdown ? "block" : "hidden"
               }`}
             >
               <Link to="/diets/intermittent-fasting">
-                <li className="px-4 py-2 hover:bg-gray-100">
+                <li className="px-4 py-2 hover:bg-gray-900">
                   Intermittent Fasting
                 </li>
               </Link>
               <Link to="/diets/ketogenic-diet">
-                <li className="px-4 py-2 hover:bg-gray-100">Ketogenic Diet</li>
+                <li className="px-4 py-2 hover:bg-gray-900">Ketogenic Diet</li>
               </Link>
               <Link to="/diets/mediterranean-diet">
-                <li className="px-4 py-2 hover:bg-gray-100">
+                <li className="px-4 py-2 hover:bg-gray-900">
                   Mediterranean Diet
                 </li>
               </Link>
               <Link to="/diets/paleo-diet">
-                <li className="px-4 py-2 hover:bg-gray-100">Paleo Diet</li>
+                <li className="px-4 py-2 hover:bg-gray-900">Paleo Diet</li>
               </Link>
               <Link to="/diets/vegan-diet">
-                <li className="px-4 py-2 hover:bg-gray-100">Vegan Diet</li>
+                <li className="px-4 py-2 hover:bg-gray-900">Vegan Diet</li>
               </Link>
               <Link to="/diets/compare">
-                <li className="px-4 py-2 hover:bg-gray-100">Compare Diets</li>
+                <li className="px-4 py-2 hover:bg-gray-900">Compare Diets</li>
               </Link>
             </ul>
           </li>

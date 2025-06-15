@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
-import silhouette from "../assets/images/silhouette.webp";
 
 import brainGut from "../assets/images/brain-gut.png";
-import logo from "../assets/logos/f2l-official-black.svg";
 
 // images
 import keto from "../assets/svgs/keto.svg";
@@ -17,9 +15,9 @@ import { WhatIsFasting } from "../components/WhatIsFasting";
 import { BenefitSlider } from "../components/BenefitSlider";
 import FastingBenefitsSection from "../components/FastingBenefitsSection";
 import ArticlesSection from "../components/ArticlesSection";
+import { HeroComponent } from "../components/HeroComponent";
 
 export const HomePage: React.FC = () => {
-  const { ref: heroRef, visible: heroVisible } = useInViewAnimation();
   const { ref: moodRef, visible: moodVisible } = useInViewAnimation();
   const { ref: dietsRef, visible: dietsVisible } = useInViewAnimation();
   const { ref: toolsRef, visible: toolsVisible } = useInViewAnimation();
@@ -27,34 +25,8 @@ export const HomePage: React.FC = () => {
   return (
     <main className="font-sans text-gray-900 overflow-hidden">
       {/* HERO */}
-      <section className="bg-white py-5 md:py-24 px-6 hero relative z-30">
-        <div
-          ref={heroRef}
-          className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 transition duration-1000 ease-in-out relative z-30${
-            heroVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-6"
-          }`}
-        >
-          <div className="md:w-1/2 text-center md:text-left">
-            <img className="my-5  max-w-[300px]" src={logo} alt="" />
-            <h1 className="text-lg md:text-2xl  mb-6 text-left poppins">
-              Intermittent Fasting and Smarter Nutrition for a Leaner You
-            </h1>
-            <p className=" mb-6">
-              Explore tools, products, and simple guidance to help you fast with
-              purpose — and fuel your day the right way.
-            </p>
-          </div>
-          <div className="md:w-1/2 justify-center hidden md:flex">
-            <img
-              src={silhouette}
-              alt="Brain clarity"
-              className="w-[300px] md:w-[400px] h-auto rounded-xl shadow-md"
-            />
-          </div>
-        </div>
-      </section>
+      <HeroComponent />
+
       <FastingBenefitsSection />
       {/* BENEFITS */}
 
