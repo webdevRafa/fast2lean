@@ -49,10 +49,10 @@ const ArticlesSection = () => {
   return (
     <section
       data-aos="fade-up"
-      className={`py-5 md:py-10 px-6 bg-white transition duration-1000 ease-in-out`}
+      className={`py-5 md:py-10 px-6 bg-gray-900 transition duration-1000 ease-in-out`}
     >
-      <h2 className="text-4xl font-bold text-center mb-10">
-        Read. Apply. Feel Better.
+      <h2 className="text-4xl font-bold text-center mb-10 text-white!">
+        Learn Something Useful Today
       </h2>
 
       {/* Navigation buttons */}
@@ -74,23 +74,25 @@ const ArticlesSection = () => {
       {/* Horizontal scrollable list */}
       <div
         ref={sliderRef}
-        className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-2 max-w-6xl mx-auto"
+        className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-2 max-w-6xl mx-auto article-rail"
       >
         {articles.map((article) => (
           <Link
             key={article.id}
             to={`/articles/${article.id}`}
-            className="snap-start min-w-[300px] bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition"
+            className="snap-start min-w-[300px] bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition mb-3"
           >
-            <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-            <p className="text-gray-700">{article.excerpt}</p>
+            <h3 className="text-xl font-semibold mb-2 text-white!">
+              {article.title}
+            </h3>
+            <p className="text-gray-400">{article.excerpt}</p>
           </Link>
         ))}
       </div>
 
       <Link
         to="/articles"
-        className="block mt-10 text-center text-blue-700 underline font-medium"
+        className="block mt-10 text-center bg-white max-w-[300px] mx-auto py-2 font-medium"
       >
         Browse All Articles →
       </Link>

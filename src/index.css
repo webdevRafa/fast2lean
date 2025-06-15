@@ -7,6 +7,29 @@
   color: white !important;
   opacity: 0.4;
 }
+@layer utilities {
+  /* ===== Articles rail scrollbar (Chrome / Edge / Safari) ===== */
+  .article-rail::-webkit-scrollbar {
+    height: 6px;                 /* thin bar */
+    background: transparent;     /* full transparent track */
+  }
+  .article-rail::-webkit-scrollbar-track {
+    background: transparent;     /* transparent track */
+  }
+  .article-rail::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25); /* --> thumb tint */
+    border-radius: 9999px;
+  }
+  .article-rail::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.45); /* optional hover */
+  }
+
+  /* ===== Firefox ===== */
+  .article-rail {
+    scrollbar-width: thin;                            /* 'thin' or 'none' */
+    scrollbar-color: rgba(255,255,255,0.25) transparent;
+  }
+}
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
@@ -89,6 +112,3 @@ p {
   color: white;
 }
 
-strong {
-  color: #c1272d;
-}

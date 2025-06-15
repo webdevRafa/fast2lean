@@ -36,12 +36,12 @@ export const RelatedProducts: React.FC<{ productTags: string[] }> = ({
   if (!products.length) return null;
 
   return (
-    <section className="mt-16 mx-auto max-w-[1400px] md:py-10">
+    <section className="mt-5 mx-auto max-w-[1400px]">
       <h2 data-aos="fade-up" className="text-2xl font-bold mb-6 text-center">
         Products You Might Like
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
-        {products.map((product, idx) => (
+        {products.slice(0, 3).map((product, idx) => (
           <ProductCard key={idx} product={product} />
         ))}
       </div>

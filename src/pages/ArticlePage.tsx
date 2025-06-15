@@ -63,7 +63,7 @@ const ArticlePage: React.FC = () => {
 
         <p className="text-gray-800 leading-relaxed whitespace-pre-line">
           <div
-            className=" text-gray-800 leading-relaxed whitespace-pre-line"
+            className="prose prose-lg max-w-none "
             dangerouslySetInnerHTML={{ __html: article.content }}
           ></div>
         </p>
