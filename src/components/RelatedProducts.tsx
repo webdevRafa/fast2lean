@@ -16,7 +16,8 @@ export const RelatedProducts: React.FC<{ productTags: string[] }> = ({
   productTags,
 }) => {
   const [products, setProducts] = useState<Product[]>([]);
-
+  const shuffled = [...products].sort(() => 0.5 - Math.random());
+  const randomProducts = shuffled.slice(0, 3);
   useEffect(() => {
     const fetchProducts = async () => {
       if (!productTags.length) return;
@@ -41,7 +42,7 @@ export const RelatedProducts: React.FC<{ productTags: string[] }> = ({
         Products You Might Like
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
-        {products.slice(0, 3).map((product, idx) => (
+        {randomProducts.map((product, idx) => (
           <ProductCard key={idx} product={product} />
         ))}
       </div>
