@@ -1,24 +1,10 @@
 [
-{
-    "name": "Vegan Protein Shake",
-    "description": "Plant-based protein blend to support lean muscle, digestion, and recovery.",
-    "tags": [
-      "protein",
-      "vegan",
-      "muscle",
-      "recovery",
-      "plant-based"
-    ]
-  },
   {
-    "name": "Whey Protein Isolate",
-    "description": "Fast-digesting protein for muscle growth and post-workout recovery.",
-    "tags": [
-      "protein",
-      "muscle",
-      "recovery",
-      "workout",
-      "fitness"
-    ]
+    "name": "Hydrolyzed Whey Protein Isolate",
+    "description": "A fast-absorbing protein powder with 25g of protein per serving, perfect for muscle recovery, lean gains, and post-workout performance.",
+    "tags": ["protein powder", "muscle recovery", "whey isolate", "fitness", "bcaa"]
   }
+  
+  
+  
 ]
