@@ -59,7 +59,7 @@ const Articles: React.FC = () => {
   return (
     <main className="max-w-[1600px] mx-auto px-6 py-16">
       <h1 className="text-4xl font-extrabold text-center mb-4 tracking-tight">
-        Explore Articles
+        Explore {articles.length} Articles
       </h1>
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
         Real insights backed by science and experience. Discover what fasting,
@@ -105,7 +105,7 @@ const Articles: React.FC = () => {
             <Link
               to={`/articles/${id}`}
               key={id}
-              className="bg-white border rounded-lg p-6 hover:shadow-xl hover:scale-[1.015] transition-all duration-200"
+              className="bg-white border border-gray-400 rounded-lg p-6 hover:shadow-xl hover:scale-[1.015] transition-all duration-200"
               data-aos="fade-up"
             >
               <h2 className="text-xl font-semibold mb-2">{data.title}</h2>
