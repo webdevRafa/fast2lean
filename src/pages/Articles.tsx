@@ -105,10 +105,12 @@ const Articles: React.FC = () => {
             <Link
               to={`/articles/${id}`}
               key={id}
-              className="bg-white border border-gray-400 rounded-lg p-6 hover:shadow-xl hover:scale-[1.015] transition-all duration-200"
+              className=" rounded-lg p-6 hover:shadow-xl hover:scale-[1.015] transition-all duration-200"
               data-aos="fade-up"
             >
-              <h2 className="text-xl font-semibold mb-2">{data.title}</h2>
+              <h2 className="text-xl font-semibold mb-2 bg-white p-1 shadow-sm">
+                {data.title}
+              </h2>
               <p className="text-gray-700 text-sm mb-4">{data.excerpt}</p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {data.tags.map((tag) => (

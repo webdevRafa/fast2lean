@@ -1,10 +1,19 @@
 [
   {
-    "name": "Hydrolyzed Whey Protein Isolate",
-    "description": "A fast-absorbing protein powder with 25g of protein per serving, perfect for muscle recovery, lean gains, and post-workout performance.",
-    "tags": ["protein powder", "muscle recovery", "whey isolate", "fitness", "bcaa"]
+    "name": "Collagen Peptides",
+    "description": "Supports skin elasticity, joint strength, and hair growth with hydrolyzed collagen peptides — perfect for daily wellness routines.",
+    "tags": ["collagen", "skin", "joints", "hair", "anti-aging"]
+  },
+  {
+    "name": "Glucosamine + Chondroitin Capsules",
+    "description": "Promotes joint lubrication and mobility support, especially useful for aging individuals and athletes experiencing stiffness or discomfort.",
+    "tags": ["glucosamine", "joints", "mobility", "arthritis", "cartilage"]
+  },
+  {
+    "name": "Boswellia Serrata Extract (Joint & Inflammation Support)",
+    "description": "A powerful herbal extract traditionally used to reduce joint inflammation and support mobility without the side effects of NSAIDs.",
+    "tags": ["boswellia", "inflammation", "joints", "mobility", "natural remedy"]
   }
-  
   
   
 ]
