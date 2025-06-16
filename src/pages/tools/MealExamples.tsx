@@ -597,7 +597,7 @@ export const MealExamples: React.FC = () => {
               key={type}
               className={`inline-block px-4 py-2 mx-1 rounded-full ${
                 mealType === type
-                  ? "bg-indigo-600 text-white"
+                  ? "bg-gray-950 text-white"
                   : "bg-gray-200 text-gray-700"
               }`}
               onClick={() => setMealType(type as any)}
@@ -611,7 +611,7 @@ export const MealExamples: React.FC = () => {
           {plan?.[mealType]?.map((meal, idx) => (
             <div
               key={idx}
-              className="bg-gray-100 rounded-lg p-4 border-l-4 border-indigo-500"
+              className="bg-gray-100 rounded-lg p-4 border-l-4 border-[#c1272d]"
             >
               <h3 className="text-lg font-bold text-gray-700">{meal.title}</h3>
               <p className="text-gray-600">{meal.description}</p>

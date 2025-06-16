@@ -17,7 +17,7 @@ export const WhatIsFasting: React.FC = () => {
 
         {/* Content */}
         <div data-aos="fade-left">
-          <h2 className="text-2xl md:text-3xl text-white!  mb-6 p-2">
+          <h2 className="text-2xl md:text-4xl font-bold underline lowercase text-white!  mb-6 p-2">
             Intermittent Fasting Explained
           </h2>
           <p className="text-gray-400! text-lg leading-relaxed mb-6">

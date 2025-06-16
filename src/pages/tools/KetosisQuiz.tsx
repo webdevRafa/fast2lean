@@ -93,7 +93,7 @@ export const KetosisQuiz: React.FC = () => {
 
             <button
               onClick={handleSubmit}
-              className="mt-8 w-full bg-indigo-600 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 transition"
+              className="mt-8 w-full bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 transition"
             >
               Get My Results
             </button>

@@ -36,10 +36,10 @@ export const FastingImpact: React.FC = () => {
       <section className="bg-[#0c0f1a] text-white py-24 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2
-            className="text-4xl font-bold mb-4 text-white!"
+            className="text-4xl font-bold mb-4 text-white! underline"
             data-aos="fade-up"
           >
-            The Amplified Impact of Fasting
+            amplify your life!
           </h2>
           <p
             className="text-lg mb-16 max-w-2xl mx-auto text-gray-300"

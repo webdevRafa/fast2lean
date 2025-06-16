@@ -41,7 +41,7 @@ const TestimonialCarousel = () => {
   return (
     <section className="py-24 px-6 relative">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-1 text-white!">
+        <h2 className="text-4xl font-bold mb-1 text-white! lowercase underline">
           Don’t Take Our Word for It…
         </h2>
         <p className="text-lg mb-12 text-gray-400">

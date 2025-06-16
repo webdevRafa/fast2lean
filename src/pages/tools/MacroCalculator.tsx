@@ -157,7 +157,7 @@ export const MacroCalculator: React.FC = () => {
 
         <button
           onClick={handleCalculate}
-          className="w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition"
+          className="w-full bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition"
         >
           Calculate Macros
         </button>

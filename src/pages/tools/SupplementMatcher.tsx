@@ -91,7 +91,7 @@ export const SupplementMatcher: React.FC = () => {
 
             <button
               onClick={handleMatch}
-              className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 transition"
+              className="w-full bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 transition"
             >
               Show My Matches
             </button>

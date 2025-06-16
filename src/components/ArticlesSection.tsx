@@ -51,8 +51,8 @@ const ArticlesSection = () => {
       data-aos="fade-up"
       className={`py-5 md:py-10 px-6 bg-gray-900 transition duration-1000 ease-in-out`}
     >
-      <h2 className="text-4xl font-bold text-center mb-10 text-white!">
-        Learn Something Useful Today
+      <h2 className="text-4xl font-bold text-center mb-10 text-white! lowercase underline">
+        EXPLORE THE VAULT
       </h2>
 
       {/* Navigation buttons */}

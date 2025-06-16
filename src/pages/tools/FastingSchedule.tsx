@@ -96,7 +96,7 @@ export const FastingSchedule: React.FC = () => {
 
         <button
           onClick={handleGenerate}
-          className="w-full cta-dark text-white font-semibold py-3 rounded-xl transition"
+          className="w-full bg-gray-900 text-white font-semibold py-3 rounded-xl transition"
         >
           Generate Schedule
         </button>
