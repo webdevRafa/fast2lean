@@ -33,7 +33,7 @@ const benefits = [
 
 export const KetogenicDietPage: React.FC = () => {
   return (
-    <div className="px-6 pt-20 pb-10 max-w-5xl mx-auto text-gray-800">
+    <div className="px-6 pt-20 pb-10 max-w-[1400px] mx-auto text-gray-800 ">
       {/* Hero */}
       <section className="text-center mb-12">
         <DietHeader
@@ -43,7 +43,7 @@ export const KetogenicDietPage: React.FC = () => {
       </section>
       <img className="mx-auto md:max-h-[400px] mb-10" src={keto} alt="" />
       {/* What is Keto */}
-      <section className="mb-12">
+      <section className="mb-12 bg-gradient-to-b from-transparent to-white py-5 px-2">
         <h2 className="text-2xl font-semibold mb-4">What is the Keto Diet?</h2>
         <p className="text-base md:text-lg leading-relaxed text-gray-700">
           The ketogenic diet shifts your body’s fuel source from carbohydrates

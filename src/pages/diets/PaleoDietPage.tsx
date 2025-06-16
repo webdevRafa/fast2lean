@@ -44,7 +44,7 @@ export const PaleoDietPage: React.FC = () => {
       </section>
       <img className="mx-auto md:max-h-[400px] mb-10" src={paleo} alt="" />
       {/* What is Paleo */}
-      <section className="mb-12">
+      <section className="mb-12 bg-gradient-to-b from-transparent to-white py-5 px-2">
         <h2 className="text-2xl font-semibold mb-4">What Is the Paleo Diet?</h2>
         <p className="text-base md:text-lg leading-relaxed text-gray-700">
           The Paleo Diet, short for “Paleolithic,” is about eating the way

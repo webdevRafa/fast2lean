@@ -31,7 +31,7 @@ export const IntermittentFastingPage: React.FC = () => {
         alt=""
       />
       {/* What is IF? */}
-      <section className="mb-12">
+      <section className="mb-12 bg-gradient-to-b from-transparent to-white py-5 px-2">
         <h2 className="text-2xl font-semibold mb-4">
           What is Intermittent Fasting?
         </h2>

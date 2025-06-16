@@ -44,7 +44,7 @@ export const VeganDietPage: React.FC = () => {
       </section>
       <img className="mx-auto md:max-h-[400px] mb-10" src={vegan} alt="" />
       {/* What is Veganism */}
-      <section className="mb-12">
+      <section className="mb-12 bg-gradient-to-b from-transparent to-white py-5 px-2">
         <h2 className="text-2xl font-semibold mb-4">
           What Does It Mean To Eat Vegan?
         </h2>

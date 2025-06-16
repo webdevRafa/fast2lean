@@ -42,7 +42,7 @@ const diets = [
 export const CompareDietsPage: React.FC = () => {
   return (
     <div className="px-6 pt-20 pb-10 max-w-6xl mx-auto text-gray-800">
-      <section className="text-center mb-12">
+      <section className="text-center mb-12 bg-gradient-to-b from-transparent to-white py-5 px-2">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Compare Diets</h1>
         <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
           Not sure which path to take? Here's how the most popular diets stack
@@ -52,7 +52,7 @@ export const CompareDietsPage: React.FC = () => {
       <div className="md:hidden flex justify-center text-gray-400 text-xs mt-2 animate-pulse">
         👉 Swipe right to view more
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto bg-gradient-to-b from-transparent to-white py-5 px-2">
         <table className="min-w-[600px] w-full text-left border rounded-xl overflow-hidden">
           <thead className="bg-gray-100">
             <tr className="text-sm text-gray-600">

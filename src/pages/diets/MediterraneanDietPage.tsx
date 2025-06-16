@@ -44,7 +44,7 @@ export const MediterraneanDietPage: React.FC = () => {
       </section>
       <img className="mx-auto md:max-h-[400px] mb-10" src={mediDiet} alt="" />
       {/* What is it */}
-      <section className="mb-12">
+      <section className="mb-12 bg-gradient-to-b from-transparent to-white py-5 px-2">
         <h2 className="text-2xl font-semibold mb-4">
           What Makes the Mediterranean Diet Different?
         </h2>
