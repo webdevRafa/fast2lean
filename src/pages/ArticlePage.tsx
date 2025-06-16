@@ -45,7 +45,7 @@ const ArticlePage: React.FC = () => {
     <>
       <main
         data-aos="fade-up"
-        className="max-w-[1400px]  mx-auto px-4 md:px-20 py-12 text-gray-900  shadow-lg mt-10"
+        className="max-w-[1400px]  mx-auto px-4 md:px-20 py-12 text-gray-900  shadow-lg mt-10 bg-gradient-to-b from-transparent to-white"
       >
         {article.bannerImageUrl && (
           <img
