@@ -83,9 +83,9 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({
   if (loading || related.length === 0) return null;
 
   return (
-    <section className="mt-16 mb-10 max-w-[1400px] mx-auto px-2 md:px-0">
-      <h2 className="text-2xl font-semibold text-center mb-6">
-        More Articles You Might Like
+    <section className="my-10 md:mt-20  max-w-[1400px] mx-auto px-2 md:px-0">
+      <h2 className="text-2xl  font-semibold text-center mb-6 text-gray-900">
+        other things you might find interest in
       </h2>
 
       <div className="grid md:grid-cols-3 gap-6">
@@ -93,7 +93,7 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({
           <Link
             key={art.id}
             to={`/articles/${art.id}`}
-            className="block rounded-lg shadow hover:shadow-md transition"
+            className="block rounded-lg shadow hover:shadow-md transition md:hover:scale-105"
           >
             {art.bannerImageUrl && (
               <img

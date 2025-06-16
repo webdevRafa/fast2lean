@@ -9,7 +9,7 @@ interface Product {
 export const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
   <div
     data-aos="fade-up"
-    className="border border-gray-300 rounded-lg p-4 shadow-md max-w-sm w-full bg-white"
+    className="border border-gray-300 rounded-lg py-6 px-4 shadow-md max-w-sm w-full bg-white"
   >
     {product.imageUrl && (
       <img

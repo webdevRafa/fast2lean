@@ -37,9 +37,9 @@ export const RelatedProducts: React.FC<{ productTags: string[] }> = ({
   if (!products.length) return null;
 
   return (
-    <section className="mt-5 mx-auto max-w-[1400px] my-10">
+    <section className="mt-5 mx-auto max-w-[1400px] my-10 md:my-16 px-2 md:px-0">
       <h2 data-aos="fade-up" className="text-2xl font-bold mb-6 text-center">
-        Products You Might Like
+        here are some products that you can benefit from
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
         {randomProducts.map((product, idx) => (
