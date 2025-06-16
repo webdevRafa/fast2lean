@@ -3,7 +3,7 @@ interface Product {
   name: string;
   description: string;
   link: string;
-  imageUrl?: string;
+  image?: string;
 }
 
 export const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
@@ -11,11 +11,11 @@ export const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
     data-aos="fade-up"
     className="border border-gray-300 rounded-lg py-6 px-4 shadow-md max-w-sm w-full bg-white"
   >
-    {product.imageUrl && (
+    {product.image && (
       <img
-        src={product.imageUrl}
+        src={product.image}
         alt={product.name}
-        className="w-full h-40 object-cover rounded mb-3"
+        className="w-full h-60 object-cover rounded mb-3"
       />
     )}
     <h3 className="text-xl font-semibold mb-1">{product.name}</h3>
