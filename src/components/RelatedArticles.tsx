@@ -93,7 +93,7 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({
           <Link
             key={art.id}
             to={`/articles/${art.id}`}
-            className="block bg-white rounded-lg shadow hover:shadow-md transition"
+            className="block rounded-lg shadow hover:shadow-md transition"
           >
             {art.bannerImageUrl && (
               <img
@@ -104,7 +104,7 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({
             )}
 
             <div className="p-4">
-              <h3 className="font-semibold text-lg mb-1 line-clamp-2">
+              <h3 className="font-semibold text-lg mb-1 line-clamp-2 bg-white p-1">
                 {art.title}
               </h3>
               <p className="text-sm text-gray-600 line-clamp-3">

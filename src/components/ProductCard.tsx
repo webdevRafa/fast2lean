@@ -24,7 +24,7 @@ export const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
       href={product.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="cursor-pointer inline-block bg-slate-950 text-white px-4 py-2 rounded"
+      className="cursor-pointer inline-block bg-[#7d0505] text-white px-4 py-2 rounded"
     >
       View on Amazon
     </a>
