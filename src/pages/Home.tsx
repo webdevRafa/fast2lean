@@ -23,7 +23,9 @@ export const HomePage: React.FC = () => {
       <FastingImpact />
       <TestimonialCarousel />
 
-      <ArticlesSection />
+      <div className="bg-gray-900">
+        <ArticlesSection />
+      </div>
 
       {/* DIET STACK */}
     </main>
